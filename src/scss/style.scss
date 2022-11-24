@@ -1,6 +1,25 @@
 @import "fonts";
 @import "null";
 @import "burger";
+@import "shop";
+@import "about_us";
+@import "blog";
+
+// ---------- mixins -----------// 
+
+@mixin for-phones {
+	@media (max-width: 370px) {
+		@content;
+	}
+}
+
+@mixin for-tablets {
+	@media (min-width: 760px) {
+		@content;
+	}
+}
+
+
 
 /* MAIN rules */
 body {
@@ -64,6 +83,8 @@ a {
 	}
 }
 
+
+
 // -------- header --------- //
 
 .header {
@@ -95,6 +116,13 @@ a {
 
 .menu__navigation {
 	display: flex;
+	
+	&:last-child{
+		width: 100%;
+		max-width: 160px;
+		display: flex;
+		justify-content: space-between;
+	}
 }
 
 .menu__item {
@@ -102,7 +130,7 @@ a {
 		font-family: Product Sans Bold;
 		font-size: 20px;
 		color: #ffffff;
-		margin-right: 45px;
+		margin-right: 55px;
 	}
 
 	&:nth-child(4) {
