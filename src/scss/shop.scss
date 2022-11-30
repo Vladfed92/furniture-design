@@ -138,7 +138,9 @@
 	color: #6B6B6B;
 }
 
-.shop__goods-filter {}
+.shop__goods-filter {
+	width: 22%;
+}
 
 .search-form__form {
 	height: 100%;
@@ -158,7 +160,9 @@
 
 .filter__filter {
 	margin-top: 50px;
-	ul{
+	
+
+	ul {
 		margin-top: 40px;
 	}
 }
@@ -173,14 +177,42 @@
 
 .filter__category-item {
 	margin-top: 32px;
+
 	a {
 		font-size: 19px;
 		color: #7E7E7E;
 	}
 }
 
-.filter__range-form {}
+.filter__range-form {
 
-.filter__range-input {}
+}
 
-.filter-btn {}
+.filter__range-input {
+	background: black;
+	border: solid 2px #ffffff;
+	border-radius: 8px;
+	height: 10px;
+	width: 250px;
+	-webkit-appearance: none;
+	margin-top: 60px;
+
+
+	&::-webkit-slider-thumb {
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		-webkit-appearance: none;
+		cursor: ew-resize;
+		background: #434343;
+	}
+}
+.amount{
+
+}
+
+.filter-btn {
+	color: black;
+	margin-top: 50px;
+	
+}

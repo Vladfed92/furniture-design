@@ -21,9 +21,9 @@
 							</div>
 							<div class="shop__items">
 								<div class="item">
-									<a class="item__link" href="#"><img class="item__photo" src="@img/shop/goods/1.png"
+									<a class="item__link" href="./shop-goods.html"><img class="item__photo" src="@img/shop/goods/1.png"
 											alt=""></a>
-									<a class="item__name">
+									<a class="item__name" href="./shop-goods.html">
 										<p>Modern sofa</p>
 									</a>
 									<div class="item-rating">
@@ -212,10 +212,11 @@
 								</ul>
 							</div>
 							<form action="" class="filter__range-form">
-								<input type="range" id="range" min="1" max="800" class="filter__range-input"
+								<input type="range" id="range" min="1" max="800" value="0" class="filter__range-input"
 									placeholder="Search...">
-
-								<a href="#" class="filter-btn">Filter</a>
+								<label for="amount">Price range:</label>
+								<input type="text" id="amount" class="amount" readonly style="border:0;">
+								<button class="filter-btn" type="button">Filter</button>
 							</form>
 						</div>
 					</div>

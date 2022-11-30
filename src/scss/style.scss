@@ -2,8 +2,11 @@
 @import "null";
 @import "burger";
 @import "shop";
+@import "shop-goods";
 @import "about_us";
 @import "blog";
+@import "blog-article";
+
 
 // ---------- mixins -----------// 
 
@@ -37,7 +40,6 @@ a {
 	width: 100%;
 	max-width: 1345px;
 	margin: 0 auto;
-	padding: 0 25px;
 }
 
 .subtitle {
@@ -95,7 +97,7 @@ a {
 
 .navigation {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	padding-top: 35px;
 }
 
@@ -116,25 +118,34 @@ a {
 
 .menu__navigation {
 	display: flex;
-	
-	&:last-child{
-		width: 100%;
-		max-width: 160px;
-		display: flex;
-		justify-content: space-between;
+
+
+	&:last-child {
+		width: 160px;
+
+		.menu__item {
+			padding-right: 23px;
+
+
+		}
 	}
 }
 
 .menu__item {
+
 	a {
 		font-family: Product Sans Bold;
 		font-size: 20px;
 		color: #ffffff;
-		margin-right: 55px;
+		margin-right: 45px;
 	}
 
 	&:nth-child(4) {
-		margin-right: 530px;
+		margin-right: 470px;
+	}
+
+	&:nth-child(3) {
+		width: 140px;
 	}
 }
 

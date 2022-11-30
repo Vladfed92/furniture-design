@@ -1,0 +1,194 @@
+.shop-goods {
+	width: 100%;
+	height: 100%;
+}
+
+.shop-goods__vay {
+	color: #646464;
+	font-size: 18px;
+	margin: 65px 0;
+}
+
+.shop-goods__columns {
+	display: flex;
+	justify-content: space-between;
+}
+
+.shop-goods__photos {
+	height: 100%;
+	max-height: 775px;
+	width: 66%;
+	display: flex;
+}
+
+.shop-goods_photos-small {
+	display: flex;
+	flex-direction: column;
+	justify-content: baseline; //!!!!!!!!!!!!!!!!!!!!!!!!!!
+	width: 33%;
+}
+
+.small-photo {
+	margin-right: 20px;
+	margin-bottom: 20px;
+	height: 23%;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.shop-goods_photos-large {
+	width: 63%;
+}
+
+.large-photo {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.shop-goods__info {
+	width: 30%;
+	height: 100%;
+	color: #9B9B9B;
+	font-size: 18px;
+}
+
+.shop-goods__info-title {
+	h3 {
+		font-weight: 700;
+		font-size: 30px;
+	}
+
+	margin-top: 8px;
+	color: #323232;
+}
+
+.shop-goods__rating {
+	display: flex;
+}
+
+.rating-star {
+	margin-right: 7px;
+}
+.shop-goods__price {
+	margin-bottom: 30px;
+}
+
+.shop-goods__old-price {
+	color: #646464;
+	font-size: 14px;
+	margin-right: 14px;
+}
+
+.shop-goods__new-price {
+	font-size: 18px;
+	color: #323232;
+	font-weight: 700;
+}
+
+.shop-goods__subtitle {
+	margin-bottom: 40px;
+	color: #9B9B9B;
+	font-size: 18px;
+	line-height: 22px;
+}
+
+.shop-goods__quontity {
+	display: flex;
+	margin-bottom: 32px;
+}
+
+.cart-quontity {
+	margin-right: 44px;
+}
+
+.cart-button {}
+
+.button {}
+
+.wish-list {
+	display: flex;
+	margin-bottom: 42px;
+}
+
+.like {}
+
+.add-to-wish {}
+
+.shop-goods__sort-info {
+	margin-bottom: 76px;
+}
+
+.sort-info-item {
+	margin-top: 16px;
+
+	a {
+		color: #9B9B9B;
+		text-decoration: underline;
+	}
+}
+
+.tag-item {}
+
+.shop-goods__manual {}
+
+.shop-goods__manual-item {
+	display: none;
+
+	&:first-child {
+		display: block;
+	}
+
+	h4 {
+		color: #535353;
+		font-size: 20px;
+		margin-bottom: 30px;
+		font-weight: normal;
+		text-decoration: underline;
+	}
+
+	p {
+		line-height: 22px;
+	}
+}
+
+.shop-goods__row {
+	margin-bottom: 50px;
+}
+
+.shop-goods__row-title {
+	margin: 75px 0 50px 0;
+}
+
+.shop-goods__row-item-area {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.shop-goods__row-item {
+	width: 24%;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+
+	.item__link {}
+
+	.item__photo {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+
+	}
+
+	.item__name {
+		margin-bottom: 18px;
+		margin-top: 37px;
+	}
+
+	.item-rating {
+		margin-left: 7px;
+	}
+}
