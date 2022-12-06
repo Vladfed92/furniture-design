@@ -13,8 +13,17 @@ $(document).ready(function () {
 
 import Splide from '@splidejs/splide';
 
-new Splide('.splide', {
+new Splide('.splide-introduce', '.splide-reviews', {
+	type: 'loop',
+	perPage: 1,
+	pagination: false,
 
-		type: 'loop',
-		perPage: 3,
-	});
+	}).mount();
+
+new Splide('.splide-reviews', {
+	type: 'loop',
+	perPage: 1,
+	pagination: false,
+
+}).mount();
+
