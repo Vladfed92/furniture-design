@@ -7,6 +7,10 @@ $(document).ready(function () {
 	$('.burger').click(function (event) {
 		$('.burger,.burger__item,.navigation,.menu__navigation').toggleClass('active');
 	});
+	$('.filter-icon').click(function (event) {
+		$('.shop__goods-filter,.filter-icon').toggleClass('active');
+	});
+
 
 	if ($('.splide-introduce').length > 0) {
 		new Splide('.splide-introduce', {
