@@ -41,22 +41,44 @@
 									<a href=""><img src="@img/blog/photos/2 .png" alt=""></a>
 									<a href=""><img src="@img/blog/photos/3 .png" alt=""></a>
 								</div>
-								<div class="article__navigation-menu">
-									<div class="article__l-arrow">
-									<h3>New wooden furniture</h3>
-									<p>Back</p>
+
+								<section class="article__navigation-menu splide splide-blog-item" role="group"
+									aria-label="Splide Basic HTML Example">
+									<div class="splide__arrows">
+										<button class="splide__arrow splide__arrow--prev">
+											<img src="@img/main/arrow-left.svg" alt="">
+										</button>
+										<button class="splide__arrow splide__arrow--next">
+											<img src="@img/main/arrow-right.svg" alt="">
+										</button>
 									</div>
-									<div class="article__r-arrow">
-										<h3>your office should have only natural material</h3>
-										<p>Next</p>
+
+									<div class="splide__track">
+										<ul class="splide__list">
+											<li class="article__arrow splide__slide">
+												<h3>New wooden furniture</h3>
+												<p>Back</p>
+											</li>
+
+											<li class="article__arrow splide__slide">
+												<h3>your office should have only natural material</h3>
+												<p>Next</p>
+											</li>
+										</ul>
 									</div>
-								</div>
+
+								</section>
 								<form action="" class="article__post-comment ">
-									<textarea class="article__comment" name="comment" id="comment" cols="80" rows="10" placeholder="Your comment"></textarea>
-									<input type="text" name="name" id="name" class="article__name input" placeholder="Your name">
-									<input type="email" id="email" class="article__email input"  placeholder="Your email">
-									<input type="text" name="website" id="website" class="article__website input"  placeholder="Your website">
-									<input type="radio" name="radio" id="radio" class="article__radio"> <p>SAVE MY NAME , EMAIL, AND WEBSITE IN THIS browser for the next time comment</p>
+									<textarea class="article__comment" name="comment" id="comment" cols="80" rows="10"
+										placeholder="Your comment"></textarea>
+									<input type="text" name="name" id="name" class="article__name input"
+										placeholder="Your name">
+									<input type="email" id="email" class="article__email input"
+										placeholder="Your email">
+									<input type="text" name="website" id="website" class="article__website input"
+										placeholder="Your website">
+									<input type="radio" name="radio" id="radio" class="article__radio">
+									<p>SAVE MY NAME , EMAIL, AND WEBSITE IN THIS browser for the next time comment</p>
 									<button class="article__btn">Submit</button>
 								</form>
 							</div>

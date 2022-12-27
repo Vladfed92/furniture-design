@@ -4,7 +4,7 @@
 "Title":"page"
 })
 
-<body>
+<body class="body">
 	<div class="wrapper">
 		<main class="page">
 			@@include('html/header.html',{})
@@ -14,6 +14,14 @@
 			<div class="introduce">
 				<div class="introduce__body">
 					<section class="splide splide-introduce" aria-label="Splide Basic HTML Example">
+						<div class="splide__arrows">
+							<button class="splide__arrow splide__arrow--prev">
+								<img src="@img/main/arrow-left.svg" alt="">
+							</button>
+							<button class="splide__arrow splide__arrow--next">
+								<img src="@img/main/arrow-right.svg" alt="">
+							</button>
+						</div>
 						<div class="splide__track">
 							<ul class="splide__list">
 								<li class="splide__slide">
@@ -202,7 +210,7 @@
 						<div class="goods-type__item">
 							<div class="goods-type__info">
 								<div class="goods-type__title title">
-									<h3>contemporary lamps</h3>
+									<h3>Table</h3>
 								</div>
 								<div class="goods-type__subtitle subtitle">
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat dolor odio
@@ -217,6 +225,7 @@
 							</div>
 							<img src="@img/main/goods/3.png" alt="" class="goods-type__img">
 						</div>
+
 					</div>
 				</div>
 			</section>
@@ -277,7 +286,7 @@
 						<div class="priorities__item">
 							<div class="priorities_title">
 								<img src="@img/main/icons/dollar-circle.png" alt="">
-								<h3>PAYMENT</h3>
+								<h3>Payment</h3>
 							</div>
 							<div class="priorities__subtitle subtitle">
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat dolor odio odio
@@ -322,6 +331,15 @@
 			<div class="reviews">
 				<div class="container">
 					<section class="splide splide-reviews" aria-label="Splide Basic HTML Example">
+						<div class="splide__arrows">
+							<button class="splide__arrow splide__arrow--prev">
+								<img src="@img/main/arrow-left.svg" alt="">
+							</button>
+							<button class="splide__arrow splide__arrow--next">
+								<img src="@img/main/arrow-right.svg" alt="">
+							</button>
+						</div>
+
 						<div class="splide__track">
 							<ul class="splide__list">
 								<li class="splide__slide">

@@ -1,3 +1,18 @@
+// ---------- mixins -----------// 
+
+@mixin for-phones {
+	@media (max-width: 480px) {
+		@content;
+	}
+}
+
+@mixin for-tablets {
+	@media (max-width: 820px) {
+		@content;
+	}
+}
+
+
 .black {
 	.logo {
 		color: #303030;
@@ -22,12 +37,14 @@
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
-	margin-top: 40px;
+	padding-top: 40px;
+
 }
 
 .shop__goods-area {
 	height: 100%;
 	width: 72%;
+
 }
 
 .shop__sort-info {
