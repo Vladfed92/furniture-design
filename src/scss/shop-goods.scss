@@ -1,3 +1,16 @@
+@mixin for-phones {
+	@media (max-width: 480px) {
+		@content;
+	}
+}
+
+@mixin for-tablets {
+	@media (max-width: 820px) {
+		@content;
+	}
+}
+
+
 .shop-goods {
 	width: 100%;
 	height: 100%;
@@ -12,6 +25,13 @@
 .shop-goods__columns {
 	display: flex;
 	justify-content: space-between;
+
+	@include for-tablets {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
 }
 
 .shop-goods__photos {
@@ -19,6 +39,10 @@
 	max-height: 775px;
 	width: 66%;
 	display: flex;
+
+	@include for-tablets {
+		width: 100%;
+	}
 }
 
 .shop-goods_photos-small {
@@ -53,6 +77,11 @@
 	height: 100%;
 	color: #9B9B9B;
 	font-size: 18px;
+
+	@include for-tablets {
+		width: 100%;
+	}
+
 }
 
 .shop-goods__info-title {
@@ -72,6 +101,11 @@
 
 .rating-star {
 	margin-right: 7px;
+	@include for-phones{
+		width: 14px;
+		margin-right: 2px;
+
+	}
 }
 
 .shop-goods__price {
@@ -180,7 +214,8 @@
 			position: relative;
 			left: 0;
 			right: 0;
-			img{
+
+			img {
 				height: 40px;
 				word-wrap: 40px;
 			}
