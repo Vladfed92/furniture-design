@@ -211,7 +211,8 @@
 
 	@include for-tablets {
 		position: absolute;
-		top: -1200px;
+		top: -2000px;
+		width: 250px;
 		right: 0;
 		transition: all 0.4s ease 0s;
 

@@ -1,4 +1,16 @@
 // about us introduction
+@mixin for-phones {
+	@media (max-width: 480px) {
+		@content;
+	}
+}
+
+@mixin for-tablets {
+	@media (max-width: 820px) {
+		@content;
+	}
+}
+
 
 .about__introduce {
 	height: 100%;
@@ -20,6 +32,10 @@
 	transform: translate(-50%);
 	font-size: 68px;
 	color: #3F3F3F;
+
+	@include for-phones {
+		font-size: 34px;
+	}
 }
 
 // about us priorities
@@ -29,6 +45,10 @@
 	.priorities__body {
 		margin-top: 90px;
 		margin-bottom: 50px;
+	}
+
+	.subtitle {
+		text-align: center;
 	}
 }
 
@@ -52,10 +72,21 @@
 	display: flex;
 	margin-bottom: 120px;
 
+	@include for-phones {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		margin-bottom: 60px;
+	}
+
 }
 
 .functionality__info {
 	width: 50%;
+
+	@include for-phones {
+		width: 100%;
+	}
 }
 
 .functionality__title {
@@ -65,6 +96,7 @@
 	margin-bottom: 24px;
 	width: 100%;
 	max-width: 381px;
+
 }
 
 .functionality__subtitle {
@@ -78,6 +110,12 @@
 	flex-direction: column;
 	width: 50%;
 	margin-left: 70px;
+
+	@include for-phones {
+		margin-top: 50px;
+		margin-left: 0;
+		width: 100%;
+	}
 }
 
 .properties {
@@ -123,6 +161,11 @@
 
 .blog-posts__body {
 	margin-bottom: 170px;
+
+	@include for-phones {
+		margin-bottom: 75px;
+		text-align: center;
+	}
 }
 
 .blog-posts__title {
@@ -135,6 +178,11 @@
 .blog-posts__posts {
 	display: flex;
 	justify-content: space-between;
+
+	@include for-phones {
+		flex-direction: column;
+		justify-content: center;
+	}
 }
 
 .blog-posts__item {
@@ -142,6 +190,15 @@
 	flex-direction: column;
 	align-items: center;
 	width: 32%;
+
+	@include for-phones {
+		width: 100%;
+		padding-bottom: 50px;
+
+		&:last-child {
+			padding-bottom: 0;
+		}
+	}
 }
 
 .blog-posts__picture {
