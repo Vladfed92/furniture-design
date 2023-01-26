@@ -19,6 +19,11 @@
 		max-height: 225px;
 		margin-bottom: 140px;
 		margin-right: 41px;
+		transition: all 0.2s ease 0s;
+
+		&:hover{
+			scale: 1.05;
+		}
 	}
 
 	&::after {

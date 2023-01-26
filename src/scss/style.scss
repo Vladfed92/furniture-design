@@ -71,6 +71,11 @@ a {
 	height: 78px;
 	border: 1px solid #FFFFFF;
 	text-decoration: none;
+	transition: all 0.2s ease 0s;
+
+	&:hover {
+		opacity: 0.6;
+	}
 
 	.botton__info {
 		color: #FFFFFF;
@@ -91,8 +96,6 @@ a {
 	}
 }
 
-
-
 // -------- header --------- //
 
 .header {
@@ -106,15 +109,12 @@ a {
 	}
 }
 
-
-
 .navigation {
 	display: flex;
 	justify-content: start;
 	padding-top: 35px;
 	height: 110px;
 }
-
 
 .logo {
 	display: block;
@@ -127,11 +127,12 @@ a {
 }
 
 .menu {
+	position: relative;
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
 	max-width: 1110px;
-	z-index: 1;
+	z-index: 2;
 
 	@include for-tablets {
 		justify-content: flex-end;
@@ -140,18 +141,24 @@ a {
 
 .menu__navigation {
 	display: flex;
+	
 
 	&:first-child {
 		@include for-tablets {
-			position: absolute;
-			top: -500px;
+			position: fixed;
+			top: -700px;
 			left: 50%;
 			transform: translateX(-50%);
 			text-align: center;
 			flex-direction: column;
+			width: 100%;
+			height: 100%;
+			background-color: #2D2D2D;
 			transition: all 0.4s ease 0s;
 		}
 	}
+
+
 
 	&.active:first-child {
 		@include for-tablets {
@@ -171,8 +178,6 @@ a {
 	}
 }
 
-
-
 .menu__item {
 
 	a {
@@ -180,6 +185,11 @@ a {
 		font-size: 20px;
 		color: #ffffff;
 		padding-right: 45px;
+		transition: all 0.2s ease 0s;
+
+		&:hover {
+			opacity: 0.6;
+		}
 
 		@include for-tablets {
 			font-size: 30px;
@@ -198,17 +208,32 @@ a {
 	@include for-tablets {
 		margin-bottom: 15px;
 	}
+
 }
 
 @include for-tablets {
 	.menu__navigation:first-child {
 		a {
+
 			padding-right: 0;
 		}
 	}
 }
 
+.header-form {
+	position: absolute;
+	width: 100%;
+	max-width: 200px;
+	right: 20%;
+	top: 50%;
+	transform: translate(20%, 0%);
+}
 
+.header-search {
+	width: 100%;
+	max-width: 350px;
+
+}
 
 // -------------  INTRODUCE ------------- //
 
@@ -237,6 +262,10 @@ a {
 			width: 60px;
 			background-color: #eeeeee;
 			opacity: 1;
+
+			@include for-tablets {
+				z-index: 1;
+			}
 
 			@include for-phones {
 				height: 67px;
@@ -318,11 +347,9 @@ a {
 		@include for-phones {
 			width: 140px;
 			height: 60px;
-
 		}
 	}
 }
-
 
 // -------------  products ------------- //
 
@@ -377,9 +404,13 @@ a {
 	}
 }
 
-
 .products__img {
 	margin-bottom: 27px;
+	transition: all 0.2s ease 0s;
+
+	&:hover {
+		scale: 1.05;
+	}
 
 }
 
@@ -388,6 +419,11 @@ a {
 	font-weight: 700;
 	color: #373737;
 	margin-bottom: 11px;
+	transition: all 0.2s ease 0s;
+
+	&:hover {
+		opacity: 0.7;
+	}
 }
 
 .products__price {
@@ -413,34 +449,6 @@ a {
 	}
 }
 
-.presentation__video {
-	position: relative;
-
-	img {
-		height: 100%;
-		width: 100%;
-		object-fit: cover;
-	}
-}
-
-.presentation__play-btn {
-	z-index: 1;
-}
-
-.play-btn-item {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-
-	&:hover {
-		filter: contrast(30%);
-	}
-
-	@include for-phones {
-		width: 10%
-	}
-}
 
 .presentation__info {
 	position: absolute;
@@ -473,7 +481,6 @@ a {
 		margin-top: 5px;
 	}
 }
-
 
 .botton__info {}
 
@@ -513,7 +520,6 @@ a {
 }
 
 .goods-type__info {
-
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -705,8 +711,6 @@ a {
 	}
 }
 
-
-
 .new-collection__image {
 	margin-bottom: 25px;
 }
@@ -730,9 +734,14 @@ a {
 	font-size: 20px;
 	color: #777777;
 	text-decoration: underline #777777;
+
+	&:hover {
+		text-decoration: none;
+	}
 }
 
 //------------ reviews ----------// 
+
 .reviews {
 	background: #EFEFEF;
 	width: 100%;
@@ -758,14 +767,11 @@ a {
 	}
 }
 
-
-
 .reviews__body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	width: 100%;
-
 }
 
 .coma {
@@ -801,7 +807,6 @@ a {
 	background: #2B2B2B;
 	padding-top: 36px;
 	padding-bottom: 56px;
-
 }
 
 .footer__row {}
@@ -842,7 +847,6 @@ a {
 }
 
 .footer__subtitle {
-
 	p {
 		width: 100%;
 		max-width: 250px;
@@ -874,6 +878,11 @@ a {
 			font-size: 23px;
 			color: #ABABAB;
 			text-decoration: none;
+			transition: all 0.2s ease 0s;
+
+			&:hover {
+				opacity: 0.6;
+			}
 
 			@include for-tablets {
 				font-size: 14px;

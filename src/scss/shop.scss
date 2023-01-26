@@ -157,6 +157,11 @@
 
 	a {
 		color: #303030;
+		transition: all 0.2s ease 0s;
+
+		&:hover {
+			opacity: 0.6;
+		}
 
 		&:last-child {
 			display: block;
@@ -183,6 +188,11 @@
 	right: 0;
 	bottom: -1px;
 	color: #6B6B6B;
+	transition: all 0.2s ease 0s;
+
+	&:hover {
+		opacity: 0.7;
+	}
 
 	@include for-phones {
 		right: 50%;
@@ -274,8 +284,23 @@
 	margin-top: 32px;
 
 	a {
+		display: inline-block;
+		width: auto;
 		font-size: 19px;
 		color: #7E7E7E;
+
+		&::after {
+			content: '';
+			width: 0;
+			height: 2px;
+			display: block;
+			background-color: #7E7E7E;
+			transition: 300ms;
+		}
+
+		&:hover::after {
+			width: 100%;
+		}
 	}
 }
 

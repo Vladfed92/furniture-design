@@ -25,6 +25,12 @@
 .article-img {
 	margin-bottom: 27px;
 	width: 100%;
+	overflow: hidden;
+	transition: all 0.2s ease 0s;
+
+	&:hover{
+		scale: 1.02;
+	}
 
 }
 
@@ -73,6 +79,11 @@
 	font-weight: 700;
 	font-size: 30px;
 	color: #2d2d2d;
+	transition: all 0.2s ease 0s;
+
+	&:hover{
+		opacity: 0.7;
+	}
 }
 
 .article__subtitle {
@@ -87,6 +98,11 @@
 	text-decoration: underline;
 	color: #2F2D2D;
 	margin-bottom: 27px;
+	transition: all 0.2s ease 0s;
+
+	&:hover{
+		opacity: 0.8;
+	}
 }
 
 .blog__filter {
@@ -155,8 +171,22 @@
 
 .catigories__item {
 	a {
+		display: inline-block;
 		font-size: 19px;
 		color: #7E7E7E;
+
+		&::after {
+			content: '';
+			width: 0;
+			height: 2px;
+			display: block;
+			background-color: #7E7E7E;
+			transition: 300ms;
+		}
+
+		&:hover::after {
+			width: 100%;
+		}
 	}
 }
 
