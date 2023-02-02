@@ -1,3 +1,17 @@
+// ---------- mixins -----------// 
+
+@mixin for-phones {
+	@media (max-width: 480px) {
+		@content;
+	}
+}
+
+@mixin for-tablets {
+	@media (max-width: 820px) {
+		@content;
+	}
+}
+
 .blog__body {
 	margin-bottom: 35px;
 }
@@ -28,7 +42,7 @@
 	overflow: hidden;
 	transition: all 0.2s ease 0s;
 
-	&:hover{
+	&:hover {
 		scale: 1.02;
 	}
 
@@ -38,6 +52,11 @@
 	margin-bottom: 27px;
 	font-size: 16px;
 	color: #898989;
+
+	span {
+		display: inline-block;
+		padding: 5px 2px;
+	}
 }
 
 .article__date {
@@ -81,7 +100,7 @@
 	color: #2d2d2d;
 	transition: all 0.2s ease 0s;
 
-	&:hover{
+	&:hover {
 		opacity: 0.7;
 	}
 }
@@ -100,7 +119,7 @@
 	margin-bottom: 27px;
 	transition: all 0.2s ease 0s;
 
-	&:hover{
+	&:hover {
 		opacity: 0.8;
 	}
 }
@@ -211,25 +230,10 @@
 	color: #786D6D;
 }
 
-.blog__filter-tegs {}
+a {
+	cursor: pointer;
 
-.blog__filter-tegs-title {
-	font-weight: 700;
-	font-size: 23px;
-	color: #2D2D2D;
-	margin-bottom: 25px;
+	:hover {
+		opacity: 0.9;
+	}
 }
-
-.blog__filter-teg-item {
-	font-size: 20px;
-	color: #9B9B9B;
-	text-decoration: underline;
-}
-
-.shop__goods-pages {}
-
-.shop__page-list {}
-
-.page {}
-
-.all-page {}

@@ -7,9 +7,11 @@
 		<main class="page">
 			@@include('html/header-black.html',{})
 			<div class="shop">
+
+
 				<div class="container">
 					<div class="shop__columns">
-						<a href="#" class="filter-icon"><img src="@img/shop/icons/icons8-funnel-50.png" alt="filter"></a>
+
 						<div class="shop__goods-area">
 							<div class="shop__sort-info">
 								<div class="results-quontity">
@@ -213,16 +215,34 @@
 									<li class="filter__category-item"><a href="#">Red (25)</a></li>
 								</ul>
 							</div>
-							<form action="" class="filter__range-form">
-								<input type="range" id="range" min="1" max="800" value="0" class="filter__range-input"
-									placeholder="Search...">
-								<label for="amount">Price range:</label>
-								<input type="text" id="amount" class="amount" readonly style="border:0;">
-								<button class="filter-btn" type="button">Filter</button>
-							</form>
+
+							<div class="price-slider">
+
+								<div class="wrapp">
+									<div class="slide">
+										<div class="progress"></div>
+									</div>
+									<div class="range-input">
+										<input type="range" class="range-min" min="0" max="1000" value="250" step="1">
+										<input type="range" class="range-max" min="0" max="1000" value="750" step="1">
+									</div>
+									<div class="price-items">
+										<div class="price-input">
+											<div class="field">
+												<div>Price</div>
+												<input type="number" class="input-min" value="250">
+											</div>
+											<div class="field">
+												<input type="number" class="input-max" value="750">
+												<div>$</div>
+											</div>
+										</div>
+										<button class="range-button">Filter</button>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
 
-			@@include('html/footer.html',{})
+				@@include('html/footer.html',{})

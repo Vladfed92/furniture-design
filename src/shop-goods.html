@@ -9,20 +9,53 @@
 			<div class="shop-goods">
 				<div class="container">
 					<div class="shop-goods__vay">
-						<p>shope/ sofa code 234</p>
+						<a href="http://localhost:3000/shop.html">shop</a>
+						<p>/</p>
+						<a href="#">sofa code 234</a>
 					</div>
+
 					<div class="shop-goods__columns">
-						<div class="shop-goods__photos">
-							<div class="shop-goods_photos-small">
-								<a href="#" class="small-photo"><img src="@img/shop/goods/1.png" alt=""></a>
-								<a href="#" class="small-photo"><img src="@img/shop/goods/1.png" alt=""></a>
-								<a href="#" class="small-photo"><img src="@img/shop/goods/1.png" alt=""></a>
-								<a href="#" class="small-photo"><img src="@img/shop/goods/1.png" alt=""></a>
-							</div>
-							<div class="shop-goods_photos-large">
-								<img src="@img/shop/goods/1.png" alt="" class="large-photo">
-							</div>
+						<div class="carousel">
+							<section id="thumbnail-carousel" class="splide-goods-item splide thumbnail-carousel"
+								aria-label="The carousel with thumbnails. Selecting a thumbnail will change the Beautiful Gallery carousel.">
+								<div class="splide__track">
+									<ul class="splide__list">
+										<li class="splide__slide">
+											<img src="@img/shop/goods/1.png" alt="">
+										</li>
+										<li class="splide__slide">
+											<img src="@img/shop/goods/2.png" alt="">
+										</li>
+										<li class="splide__slide">
+											<img src="@img/shop/goods/3.png" alt="">
+										</li>
+										<li class="splide__slide">
+											<img src="@img/shop/goods/4.png" alt="">
+										</li>
+									</ul>
+								</div>
+							</section>
+							<section id="main-carousel" class="splide-goods-item splide main-carousel"
+								aria-label="The carousel with thumbnails. Selecting a thumbnail will change the Beautiful Gallery carousel.">
+								<div class="splide__track">
+									<ul class="splide__list">
+										<li class="splide__slide">
+											<img src="@img/shop/goods/1.png" alt="">
+										</li>
+										<li class="splide__slide">
+											<img src="@img/shop/goods/2.png" alt="">
+										</li>
+										<li class="splide__slide">
+											<img src="@img/shop/goods/3.png" alt="">
+										</li>
+										<li class="splide__slide">
+											<img src="@img/shop/goods/4.png" alt="">
+										</li>
+									</ul>
+								</div>
+							</section>
 						</div>
+
 						<div class="shop-goods__info">
 							<div class="shop-goods__info-title">
 								<h3>Sofa code 234</h3>
@@ -44,10 +77,15 @@
 									enim donec adipiscing nibh.
 									Consectetur in ac elementum aliquam imperdiet tellus.</p>
 							</div>
-							<form action="" class="shop-goods__quontity">
-								<input type="number" id="cart-quontity" class="cart-quontity">
+							<div class="shop-goods__quontity">
+								<div class="quontity-counter">
+									<span class="left-arrow"></span>
+									<div class="counter" id="counter">1</div>
+									<span class="right-arrow"></span>
+								</div>
 								<button class="cart-button button">Add to cart</button>
-							</form>
+							</div>
+
 							<div class="wish-list">
 								<span class="like"></span>
 								<span class="add-to-wish">Add to wish</span>
