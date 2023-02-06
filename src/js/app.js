@@ -77,27 +77,40 @@ const filter = document.querySelector('.filter-icon')
 const closingTriggers = document.querySelectorAll('.criss-cross, .close-message-button');
 // variables for togle 'actve' on dandruff
 const dandruff = document.querySelector('.dandruff')
-const headerSearch = document.querySelector('.header-search')
+const headerSearch = document.querySelectorAll('.header-search, .cart-disabled')
 // variables for togle 'actve' on dandruff
 const cart = document.querySelector('.cart-img')
-const cartActive = document.querySelector('.cart')
+const cartActive = document.querySelectorAll('.cart, .cart-disabled')
+const cartDisabled = document.querySelector('.cart-disabled');
+// variables for add like click
+const heart = document.querySelector('.heart')
+const likeHolder = document.querySelector('.article__likes')
+let likeCount = 5;
+
 
 // add new class 'active' function
-const addNewClass = (element) => {
+const toggleClass = (element) => {
 	element.classList.toggle('active');
 };
+// add new class
+
+const addNewClass = (element) => {
+	element.classList.add('active')
+}
+
 // remove 'active' class function
 const removeClass = (element) => {
 	element.classList.remove('active')
 }
+
 //togle class 'active' to 'burger' element
 burger.addEventListener('click', function () {
-	classesForActivationBurger.forEach(addNewClass)
+	classesForActivationBurger.forEach(toggleClass)
 });
 //togle class 'active' to module window
 moduleHaveNoPage.forEach(element => {
 	element.addEventListener('click', function () {
-		addNewClass(moduleWindowhaveNoPage)
+		toggleClass(moduleWindowhaveNoPage)
 	})
 });
 // collect all classes to remove module window
@@ -111,16 +124,52 @@ if (closingTriggers.length > 0) {
 
 if (classesForActivationFilter.length > 0)
 	filter.addEventListener('click', function () {
-		classesForActivationFilter.forEach(addNewClass)
+		classesForActivationFilter.forEach(toggleClass)
 	})
 
 
 dandruff.addEventListener('click', function () {
-	addNewClass(headerSearch)
+	headerSearch.forEach(toggleClass)
 });
+
 cart.addEventListener('click', function () {
-	addNewClass(cartActive)
+	cartActive.forEach(toggleClass)
 });
+
+cartDisabled.addEventListener('click', function () {
+	headerSearch.forEach(removeClass)
+})
+
+
+cartDisabled.addEventListener('click', function () {
+	cartActive.forEach(removeClass)
+})
+
+
+const addLikeCount = () => {
+	likeHolder.textContent = likeCount
+}
+
+if (heart) {
+	heart.addEventListener('click', function () {
+		if (heart.classList.contains('noLiked')) {
+			likeCount++;
+			addLikeCount();
+			heart.style.fill = 'red';
+			heart.classList.remove('noLiked')
+			heart.classList.add('isLiked')
+
+		}
+		else if (heart.classList.contains('isLiked')) {
+			likeCount--;
+			addLikeCount();
+			heart.style.fill = 'none';
+			heart.classList.remove('isLiked')
+			heart.classList.add('noLiked')
+		}
+
+	})
+}
 
 // range for filter in shop-goods
 const rangeInput = document.querySelectorAll(".range-input input"),
@@ -175,12 +224,14 @@ let count = 1;
 const updateCounter = () => {
 	counterBox.innerHTML = count;
 }
-subtractQuontity.addEventListener('click', function () {
-	if (count > 0) { count--; }
-	updateCounter()
-});
+if (subtractQuontity) {
+	subtractQuontity.addEventListener('click', function () {
+		if (count > 0) { count--; }
+		updateCounter()
+	});
 
-addQuontity.addEventListener('click', function () {
-	count++;
-	updateCounter()
-})
+	addQuontity.addEventListener('click', function () {
+		count++;
+		updateCounter()
+	})
+}

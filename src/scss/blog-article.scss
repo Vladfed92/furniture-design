@@ -55,10 +55,14 @@
 .splide-blog-item {
 
 	.splide__track {
-		width: 700px;
-		margin: 0 auto;
+		width: 100%;
+		max-width: 650px;
+		margin: 0 0 0 120px;
 
-		.splide__list {}
+		@include for-tablets {
+			margin: 0 auto;
+		}
+
 	}
 
 	.splide__arrows {
@@ -99,10 +103,9 @@
 		font-size: 20px;
 		color: #786D6D;
 	}
-
 }
 
-.splide__track.splide__track--loop.splide__track--ltr.splide__track--draggable{
+.splide__track.splide__track--loop.splide__track--ltr.splide__track--draggable {
 	width: 100%;
 
 	.splide__list {
@@ -111,18 +114,22 @@
 	}
 }
 
-
 .article__post-comment {
-	display: flex;
-	flex-direction: column;
 	margin-bottom: 125px;
 	height: 100%;
+	width: 100%;
+}
+
+.article__comment {
+	padding-left: 40px;
+	width: 100%;
 }
 
 .input {
 	margin-bottom: 24px;
 	height: 92px;
 	padding-left: 40px;
+	width: 100%;
 }
 
 .article__comment {
@@ -131,17 +138,54 @@
 	margin-bottom: 24px;
 }
 
-.article__name {}
-
-.article__email {}
-
 .article__website {
 	margin-bottom: 31px;
 
 }
 
-.article__radio {}
+.article__radio[type='checkbox'] {
+	margin: 0 10px 0 0;
+	box-sizing: border-box;
+	appearance: none;
+	background: white;
+	outline: 1px solid rgba(51, 51, 51, 0.26);
+	border: 3px solid white;
+	width: 16px;
+	height: 16px;
+}
+
+.article__radio[type='checkbox']:checked {
+	background: #333;
+}
 
 .article__btn {
 	margin-top: 31px;
+	width: 145px;
+	height: 66px;
+	background: #2F2E2E;
+	font-weight: 700;
+	font-size: 23px;
+	color: #DCDCDC;
+	text-align: center;
+	padding-top: 22px;
+	cursor: pointer;
+
+	&:hover {
+		opacity: 0.9;
+	}
+
+	&:active {
+		scale: 0.95;
+	}
+}
+
+.label-radio {
+	font-size: 16px;
+	color: #BFBFBF;
+}
+
+.heart-box {
+	position: relative;
+	top: 5px;
+	cursor: pointer;
 }

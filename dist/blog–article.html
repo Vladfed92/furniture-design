@@ -14,7 +14,6 @@
 		<main class="page">
 			<header class="header header-black">
 	<div class="container">
-
 		<nav class="black navigation">
 			<a href="/index.html" class="logo">
 				soudemy
@@ -27,13 +26,13 @@
 					<li class="menu__item"><a href="/blog.html">Blog</a></li>
 				</ul>
 				<ul class="menu__navigation">
+					<li class="cart-disabled"></li>
 					<li class="menu__item">
 						<form action="" class="header-form">
 							<input type="search" class="header-search">
 						</form> <a href="#"><img src="img/main/icons/search-normal.svg" alt="dandruff"
 								class="dandruff"></a>
 					</li>
-
 					<li class="menu__item"><a href="#"><img src="img/main/icons/bag-2.svg" alt="" class="cart-img"></a>
 						<div class="cart">
 							<div class="cart-info">
@@ -58,7 +57,6 @@
 							</div>
 						</div>
 					</li>
-
 					<li class="menu__item"><a class="burger" href="#"><span class="burger__item"></span></a></li>
 				</ul>
 
@@ -66,6 +64,24 @@
 		</nav>
 	</div>
 </header>
+
+			<div class="modal-window">
+				<div class="modal-window-attention">
+					<div class="head-attention">
+						<h3 class="head-message">Uuuuups, something go wrong!!! </h3>
+						<div class="modal-window-buttom">
+							<div class="criss-cross"></div>
+						</div>
+					</div>
+					<div class="message-atantion">
+						<p class='message-text'>Sorry, it's item not ready yet. It`s need backend work or this page is not ready yet
+						</p>
+			
+						<div class="close-message-button">Close</div>
+					</div>
+				</div>
+			</div>
+
 			<div class="container">
 				<div class="blog__body">
 					<div class="shop-goods__vay">
@@ -83,7 +99,7 @@
 									<span class="article__date">Sep 26, 2022</span>
 									<span class="article__made-of">Newest, sofa and chair , wooden</span>
 									<span class="article__made-by">By soroush norozy</span>
-									<span class="article__likes">5</span>
+									<span class="article__likes"><img src="img/blog/icon/heart.svg" alt="heart" class="heart">5</span>
 									<span class="article__comments">3</span>
 								</div>
 								<h2 class="article__title">New modern sofa is here</h2>
@@ -100,8 +116,8 @@
 									ultricies a eget sed. Vestibulum velit vulputate amet nunc amet. “
 								</div>
 								<div class="article__additional-photo">
-									<a href=""><img src="img/blog/photos/2 .png" alt=""></a>
-									<a href=""><img src="img/blog/photos/3 .png" alt=""></a>
+									<a href=""#><img src="img/blog/photos/2 .png" alt="" class="have-no-page"></a>
+									<a href="#"><img src="img/blog/photos/3 .png" alt="" class="have-no-page"></a>
 								</div>
 
 								<section class="article__navigation-menu splide splide-blog-item" role="group"
@@ -139,9 +155,9 @@
 										placeholder="Your email">
 									<input type="text" name="website" id="website" class="article__website input"
 										placeholder="Your website">
-									<input type="radio" name="radio" id="radio" class="article__radio">
-									<p>SAVE MY NAME , EMAIL, AND WEBSITE IN THIS browser for the next time comment</p>
-									<button class="article__btn">Submit</button>
+									<input type="checkbox" name="radio" id="radio" class="article__radio">
+									<label type="text" id="radio" class="label-radio"> Sace my name, email, amd website in this browser for the next time comment</label>
+									<div class="article__btn">Submit</div>
 								</form>
 							</div>
 
@@ -174,11 +190,11 @@
 
 							<div class="blog__filter-post">
 								<h3 class="blog__filter-post-title">Recent post</h3>
-								<a href="#" class="blog__filter-post-subtitle">Lorem ipsum dolor sit amet,
+								<a href="#" class="blog__filter-post-subtitle have-no-page">Lorem ipsum dolor sit amet,
 									consectetur</a>
-								<a href="#" class="blog__filter-post-subtitle">Lorem ipsum dolor sit amet,
+								<a href="#" class="blog__filter-post-subtitle have-no-page">Lorem ipsum dolor sit amet,
 									consectetur</a>
-								<a href="#" class="blog__filter-post-subtitle">Lorem ipsum dolor sit amet,
+								<a href="#" class="blog__filter-post-subtitle have-no-page">Lorem ipsum dolor sit amet,
 									consectetur</a>
 							</div>
 						</div>

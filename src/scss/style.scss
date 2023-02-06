@@ -1,16 +1,4 @@
-@import "fonts";
-@import "null";
-@import "burger";
-@import "shop";
-@import "shop-goods";
-@import "about_us";
-@import "blog";
-@import "blog-article";
-
-
-
 // ---------- mixins -----------// 
-
 @mixin for-phones {
 	@media (max-width: 480px) {
 		@content;
@@ -23,7 +11,14 @@
 	}
 }
 
-
+@import "fonts";
+@import "null";
+@import "burger";
+@import "shop";
+@import "shop-goods";
+@import "about_us";
+@import "blog";
+@import modal-window "blog-article";
 
 /* MAIN rules */
 body {
@@ -54,11 +49,9 @@ a {
 	top: -200px;
 	width: 100%;
 	height: 140%;
-	background-color: #ababab;
 	z-index: 10;
 	justify-content: center;
 	align-items: center;
-
 
 	.modal-window-attention {
 		width: 60%;
@@ -69,21 +62,20 @@ a {
 		background: #7777773d;
 		border-radius: 5px;
 
-
 		.head-attention {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
 			min-height: 40px;
 			width: 100%;
-			background: #3737377e;
+			background: #373737;
 			border-top-left-radius: 5px;
 			border-top-right-radius: 5px;
 
 			.head-message {
 				display: inline-block;
 				margin-left: 20px;
-				color: #2b2a2a;
+				color: #FFFFFF;
 			}
 
 			.modal-window-buttom {
@@ -97,7 +89,6 @@ a {
 				width: 20px;
 				height: 3px;
 				background-color: #7777773d;
-
 
 				&:before {
 					position: absolute;
@@ -120,7 +111,6 @@ a {
 					top: 0;
 					background-color: #FFFFFF;
 				}
-
 			}
 		}
 	}
@@ -248,7 +238,6 @@ a {
 }
 
 .menu {
-
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
@@ -263,9 +252,7 @@ a {
 .menu__navigation {
 	display: flex;
 
-
 	&:first-child {
-
 		@include for-tablets {
 			position: fixed;
 			top: -1500px;
@@ -279,8 +266,6 @@ a {
 			transition: all 0.4s ease 0s;
 		}
 	}
-
-
 
 	&.active:first-child {
 		@include for-tablets {
@@ -301,7 +286,6 @@ a {
 }
 
 .menu__item {
-
 	a {
 		font-family: Product Sans Bold;
 		font-size: 20px;
@@ -330,13 +314,11 @@ a {
 	@include for-tablets {
 		margin-bottom: 15px;
 	}
-
 }
 
 @include for-tablets {
 	.menu__navigation:first-child {
 		a {
-
 			padding-right: 0;
 		}
 	}
@@ -346,6 +328,7 @@ a {
 	position: absolute;
 	right: 0;
 	top: 65%;
+	z-index: 11;
 }
 
 .header-search {
@@ -364,6 +347,15 @@ a {
 	transition: opacity 0.2s ease 0s, visibility 0.2s ease 0s, width 0.4s ease 0.3s;
 }
 
+.cart-disabled.active {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 1000%;
+	z-index: 10;
+}
+
 .cart {
 	visibility: hidden;
 	opacity: 0;
@@ -380,7 +372,8 @@ a {
 	z-index: 11;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 	transition: all 0.4s ease 0.1s;
-	&.active{
+
+	&.active {
 		visibility: visible;
 		opacity: 1;
 	}
@@ -427,20 +420,10 @@ a {
 	padding-left: 10px;
 }
 
-.quontity {}
-
-.price {}
-
-.old-price {}
-
-.actual-price {}
-
 .cart-final-info {
 	display: flex;
 	justify-content: space-around;
 }
-
-.final-cart-price {}
 
 .cort-button {
 	border: none;
@@ -456,8 +439,6 @@ a {
 		scale: 0.95;
 	}
 }
-
-
 
 // -------------  INTRODUCE ------------- //
 
@@ -577,8 +558,6 @@ a {
 
 // -------------  products ------------- //
 
-.products {}
-
 .products__body {
 	display: flex;
 	flex-direction: column;
@@ -635,7 +614,6 @@ a {
 	&:hover {
 		scale: 1.05;
 	}
-
 }
 
 .products__name {
@@ -663,8 +641,6 @@ a {
 	height: 100%;
 }
 
-.presentation__media {}
-
 .presentation__picture {
 	img {
 		height: 100%;
@@ -672,7 +648,6 @@ a {
 		object-fit: cover;
 	}
 }
-
 
 .presentation__info {
 	position: absolute;
@@ -706,11 +681,7 @@ a {
 	}
 }
 
-.botton__info {}
-
 // -------------  goods-type ------------- //
-
-.goods-type {}
 
 .goods-type__body {
 	display: flex;
@@ -729,7 +700,6 @@ a {
 
 		@include for-phones {
 			flex-direction: column;
-
 		}
 	}
 
@@ -762,7 +732,6 @@ a {
 
 .goods-type__title {
 	margin-bottom: 37px;
-
 }
 
 .goods-type__subtitle {
@@ -840,7 +809,6 @@ a {
 	}
 }
 
-
 // -------------  priorities ------------- //
 
 .priorities__body {
@@ -902,8 +870,6 @@ a {
 }
 
 // ---------- new-collection ------------//
-
-
 .new-collection__body {
 	display: flex;
 	justify-content: space-between;
@@ -965,7 +931,6 @@ a {
 }
 
 //------------ reviews ----------// 
-
 .reviews {
 	background: #EFEFEF;
 	width: 100%;
@@ -973,7 +938,6 @@ a {
 	padding: 25px 0 74px 0;
 
 	.splide {
-
 		.splide__arrow--prev {
 			left: 0;
 		}
@@ -1024,7 +988,6 @@ a {
 }
 
 // -------- footer ----------// 
-
 .footer {
 	height: 100%;
 	width: 100%;
@@ -1032,8 +995,6 @@ a {
 	padding-top: 36px;
 	padding-bottom: 56px;
 }
-
-.footer__row {}
 
 .footer__logo {
 	margin-bottom: 50px;

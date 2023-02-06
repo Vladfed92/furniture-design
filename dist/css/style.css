@@ -614,10 +614,27 @@ input[type=range]::-moz-range-thumb {
 .shop-goods__columns .carousel {
   display: flex;
   width: 67%;
+  height: 100%;
+}
+@media (max-width: 820px) {
+  .shop-goods__columns .carousel {
+    max-height: 750px;
+    width: 100%;
+  }
+}
+@media (max-width: 820px) {
+  .shop-goods__columns .carousel {
+    height: 500px;
+  }
 }
 .shop-goods__columns .carousel .main-carousel {
   max-height: 781px;
   margin-left: 15px;
+}
+@media (max-width: 820px) {
+  .shop-goods__columns .carousel .main-carousel {
+    width: 70%;
+  }
 }
 .shop-goods__columns .carousel .main-carousel .splide__track {
   width: 100%;
@@ -630,6 +647,11 @@ input[type=range]::-moz-range-thumb {
 }
 .shop-goods__columns .carousel .thumbnail-carousel {
   max-height: 780px;
+}
+@media (max-width: 820px) {
+  .shop-goods__columns .carousel .thumbnail-carousel {
+    width: 25%;
+  }
 }
 .shop-goods__columns .carousel .thumbnail-carousel .splide__track {
   height: 100%;
@@ -775,6 +797,13 @@ input[type=range]::-moz-range-thumb {
   color: #E2E2E2;
   font-size: 18px;
   font-weight: 700;
+  cursor: pointer;
+}
+.cart-button:hover {
+  opacity: 0.95;
+}
+.cart-button:active {
+  scale: 0.95;
 }
 
 .wish-list {
@@ -894,6 +923,11 @@ input[type=range]::-moz-range-thumb {
 }
 .shop-goods__row-item .item-rating {
   margin-left: 7px;
+}
+
+.modal-window-ref {
+  color: #323232;
+  text-decoration: underline;
 }
 
 .about__introduce {
@@ -1311,113 +1345,7 @@ a :hover {
   opacity: 0.9;
 }
 
-.article__second-subtitle {
-  margin-top: 45px;
-  margin-bottom: 28px;
-  font-weight: 700;
-  font-size: 19px;
-  line-height: 30px;
-  color: #434141;
-}
-
-.article__additional-photo {
-  display: flex;
-  margin-bottom: 40px;
-  flex-wrap: wrap;
-}
-.article__additional-photo img {
-  width: 100%;
-  max-width: 310px;
-  height: 100%;
-  max-height: 225px;
-  margin-bottom: 140px;
-  margin-right: 41px;
-  transition: all 0.2s ease 0s;
-}
-.article__additional-photo img:hover {
-  scale: 1.05;
-}
-.article__additional-photo::after {
-  content: " ";
-  border-bottom: 1px solid #434141;
-  width: 100%;
-}
-
-.article__navigation-menu {
-  width: 100%;
-  margin-bottom: 100px;
-}
-
-.splide-blog-item .splide__track {
-  width: 700px;
-  margin: 0 auto;
-}
-.splide-blog-item .splide__arrows .splide__arrow {
-  top: 40%;
-  border-radius: 0%;
-  width: 53px;
-  height: 53px;
-}
-@media (max-width: 820px) {
-  .splide-blog-item .splide__arrows .splide__arrow {
-    top: 150%;
-  }
-}
-
-.article__arrow.splide__slide {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 80px;
-  max-height: 150px;
-}
-.article__arrow.splide__slide h3 {
-  width: 100%;
-  font-weight: 700;
-  font-size: 23px;
-  color: #4B4B4B;
-  max-width: 306px;
-}
-.article__arrow.splide__slide p {
-  width: 100%;
-  font-size: 20px;
-  color: #786D6D;
-}
-
-.splide__track.splide__track--loop.splide__track--ltr.splide__track--draggable {
-  width: 100%;
-}
-.splide__track.splide__track--loop.splide__track--ltr.splide__track--draggable .splide__list {
-  width: 100%;
-}
-
-.article__post-comment {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 125px;
-  height: 100%;
-}
-
-.input {
-  margin-bottom: 24px;
-  height: 92px;
-  padding-left: 40px;
-}
-
-.article__comment {
-  padding-top: 25px;
-  padding-left: 40px;
-  margin-bottom: 24px;
-}
-
-.article__website {
-  margin-bottom: 31px;
-}
-
-.article__btn {
-  margin-top: 31px;
-}
-
+@importnmodal-window "blog-article";
 /* MAIN rules */
 body {
   font-family: Product Sans Regular;
@@ -1447,7 +1375,6 @@ a {
   top: -200px;
   width: 100%;
   height: 140%;
-  background-color: #ababab;
   z-index: 10;
   justify-content: center;
   align-items: center;
@@ -1467,14 +1394,14 @@ a {
   align-items: center;
   min-height: 40px;
   width: 100%;
-  background: rgba(55, 55, 55, 0.4941176471);
+  background: #373737;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
 .modal-window .modal-window-attention .head-attention .head-message {
   display: inline-block;
   margin-left: 20px;
-  color: #2b2a2a;
+  color: #FFFFFF;
 }
 .modal-window .modal-window-attention .head-attention .modal-window-buttom {
   cursor: pointer;
@@ -1704,6 +1631,7 @@ a {
   position: absolute;
   right: 0;
   top: 65%;
+  z-index: 11;
 }
 
 .header-search {
@@ -1720,6 +1648,15 @@ a {
   visibility: initial;
   width: 250px;
   transition: opacity 0.2s ease 0s, visibility 0.2s ease 0s, width 0.4s ease 0.3s;
+}
+
+.cart-disabled.active {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1000%;
+  z-index: 10;
 }
 
 .cart {
