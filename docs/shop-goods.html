@@ -1,41 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
+
+<head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
 	<title>Title</title>
-</head>	
+</head>
 
 <body>
 	<div class="wrapper">
 		<main class="page">
-			<header class="header header-black">
-	<div class="container">
-
-		<nav class="black navigation">
-			<a href="/index.html" class="logo">
-				soudemy
-			</a>
-			<div class="menu">
-				<ul class="menu__navigation">
-					<li class="menu__item"><a href="/index.html">Home</a></li>
-					<li class="menu__item"><a href="/shop.html">Shop</a></li>
-					<li class="menu__item"><a href="/about_us.html">About us</a></li>
-					<li class="menu__item"><a href="/blog.html">Blog</a></li>
-				</ul>
-				<ul class="menu__navigation">
-					<li class="menu__item"><a href="#"><img src="img/main/icons/search-normal.svg" alt=""></a></li>
-					<li class="menu__item"><a href="#"><img src="img/main/icons/bag-2.svg" alt=""></a></li>
-					<li class="menu__item"><a class="burger" href="#"><span class="burger__item"></span></a></li>
-				</ul>
-
-			</div>
-		</nav>
-	</div>
-</header>
+			@@include('html/header-black.html',{})
 			<div class="shop-goods">
 				<div class="container">
 					<div class="shop-goods__vay">
@@ -87,8 +65,8 @@
 								<div class="sort-info-item">Category: sofa</div>
 								<div class="sort-info-item">
 									<span>tags:</span>
-									<a href="#" class="tag-item">sofa</a>
-									<a href="#" class="tag-item">clean</a>
+									<a class="tag-item have-no-page">sofa</a>
+									<a class="tag-item have-no-page">clean</a>
 								</div>
 							</div>
 							<div class="shop-goods__manual">
@@ -116,149 +94,150 @@
 
 					<section class="shop-goods__row splide-goods splide" role="group"
 						aria-label="Splide Basic HTML Example">
-							<div class="splide__track">
-								<div class="shop-goods__row-title">
-									<h3>Related products</h3>
+						<div class="splide__track">
+							<div class="shop-goods__row-title">
+								<h3>Related products</h3>
 
-									<div class="splide__arrows">
-										<button class="splide__arrow splide__arrow--prev">
-											<img src="img/main/arrow-left.svg" alt="">
-										</button>
-										<button class="splide__arrow splide__arrow--next">
-											<img src="img/main/arrow-right.svg" alt="">
-										</button>
-									</div>
-
+								<div class="splide__arrows">
+									<button class="splide__arrow splide__arrow--prev">
+										<img src="img/main/arrow-left.svg" alt="">
+									</button>
+									<button class="splide__arrow splide__arrow--next">
+										<img src="img/main/arrow-right.svg" alt="">
+									</button>
 								</div>
 
-								<ul class="shop-goods__row-item-area splide__list">
-									<li class="shop-goods__row-item item splide__slide">
-										<a class="item__link" href="./shop–goods.html"><img class="item__photo"
-												src="img/shop/goods/2.png" alt=""></a>
-										<a class="item__name" href="./shop–goods.html">
-											<p>Modern sofa</p>
-										</a>
-										<div class="item-rating">
-											<img src="img/shop/icons/Star.png" alt="" class="rating-star">
-											<img src="img/shop/icons/Star.png" alt="" class="rating-star">
-											<img src="img/shop/icons/Star.png" alt="" class="rating-star">
-											<img src="img/shop/icons/Star.png" alt="" class="rating-star">
-											<img src="img/shop/icons/Star.png" alt="" class="rating-star">
-										</div>
-									</li>
-
-									<li class="shop-goods__row-item item splide__slide">
-										<a class="item__link" href="./shop–goods.html"><img class="item__photo"
-												src="img/shop/goods/3.png" alt=""></a>
-										<a class="item__name" href="./shop–goods.html">
-											<p>Modern sofa</p>
-										</a>
-										<div class="item-rating">
-											<img src="img/shop/icons/Star.png" alt="" class="rating-star">
-											<img src="img/shop/icons/Star.png" alt="" class="rating-star">
-											<img src="img/shop/icons/Star.png" alt="" class="rating-star">
-											<img src="img/shop/icons/Star.png" alt="" class="rating-star">
-											<img src="img/shop/icons/Star.png" alt="" class="rating-star">
-										</div>
-									</li>
-
-									<li class="shop-goods__row-item item splide__slide">
-										<a class="item__link" href="./shop–goods.html"><img class="item__photo"
-												src="img/shop/goods/4.png" alt=""></a>
-										<a class="item__name" href="./shop–goods.html">
-											<p>Modern sofa</p>
-										</a>
-										<div class="item-rating">
-											<img src="img/shop/icons/Star.png" alt="" class="rating-star">
-											<img src="img/shop/icons/Star.png" alt="" class="rating-star">
-											<img src="img/shop/icons/Star.png" alt="" class="rating-star">
-											<img src="img/shop/icons/Star.png" alt="" class="rating-star">
-											<img src="img/shop/icons/Star.png" alt="" class="rating-star">
-										</div>
-									</li>
-
-									<li class="shop-goods__row-item item splide__slide">
-										<a class="item__link" href="./shop–goods.html"><img class="item__photo"
-												src="img/shop/goods/5.png" alt=""></a>
-										<a class="item__name" href="./shop–goods.html">
-											<p>Modern sofa</p>
-										</a>
-										<div class="item-rating">
-											<img src="img/shop/icons/Star.png" alt="" class="rating-star">
-											<img src="img/shop/icons/Star.png" alt="" class="rating-star">
-											<img src="img/shop/icons/Star.png" alt="" class="rating-star">
-											<img src="img/shop/icons/Star.png" alt="" class="rating-star">
-											<img src="img/shop/icons/Star.png" alt="" class="rating-star">
-										</div>
-									</li>
-								</ul>
 							</div>
+
+							<ul class="shop-goods__row-item-area splide__list">
+								<li class="shop-goods__row-item item splide__slide">
+									<a class="item__link have-no-page" href="./shop–goods.html"><img class="item__photo"
+											src="img/shop/goods/2.png" alt=""></a>
+									<a class="item__name have-no-page" href="./shop–goods.html">
+										<p>Modern sofa</p>
+									</a>
+									<div class="item-rating">
+										<img src="img/shop/icons/Star.png" alt="" class="rating-star">
+										<img src="img/shop/icons/Star.png" alt="" class="rating-star">
+										<img src="img/shop/icons/Star.png" alt="" class="rating-star">
+										<img src="img/shop/icons/Star.png" alt="" class="rating-star">
+										<img src="img/shop/icons/Star.png" alt="" class="rating-star">
+									</div>
+								</li>
+
+								<li class="shop-goods__row-item item splide__slide">
+									<a class="item__link have-no-page" href="./shop–goods.html"><img class="item__photo"
+											src="img/shop/goods/3.png" alt=""></a>
+									<a class="item__name have-no-page" href="./shop–goods.html">
+										<p>Modern sofa</p>
+									</a>
+									<div class="item-rating">
+										<img src="img/shop/icons/Star.png" alt="" class="rating-star">
+										<img src="img/shop/icons/Star.png" alt="" class="rating-star">
+										<img src="img/shop/icons/Star.png" alt="" class="rating-star">
+										<img src="img/shop/icons/Star.png" alt="" class="rating-star">
+										<img src="img/shop/icons/Star.png" alt="" class="rating-star">
+									</div>
+								</li>
+
+								<li class="shop-goods__row-item item splide__slide">
+									<a class="item__link have-no-page" href="./shop–goods.html"><img class="item__photo"
+											src="img/shop/goods/4.png" alt=""></a>
+									<a class="item__name have-no-page" href="./shop–goods.html">
+										<p>Modern sofa</p>
+									</a>
+									<div class="item-rating">
+										<img src="img/shop/icons/Star.png" alt="" class="rating-star">
+										<img src="img/shop/icons/Star.png" alt="" class="rating-star">
+										<img src="img/shop/icons/Star.png" alt="" class="rating-star">
+										<img src="img/shop/icons/Star.png" alt="" class="rating-star">
+										<img src="img/shop/icons/Star.png" alt="" class="rating-star">
+									</div>
+								</li>
+
+								<li class="shop-goods__row-item item splide__slide">
+									<a class="item__link have-no-page" href="./shop–goods.html"><img class="item__photo"
+											src="img/shop/goods/5.png" alt=""></a>
+									<a class="item__name have-no-page" href="./shop–goods.html">
+										<p>Modern sofa</p>
+									</a>
+									<div class="item-rating">
+										<img src="img/shop/icons/Star.png" alt="" class="rating-star">
+										<img src="img/shop/icons/Star.png" alt="" class="rating-star">
+										<img src="img/shop/icons/Star.png" alt="" class="rating-star">
+										<img src="img/shop/icons/Star.png" alt="" class="rating-star">
+										<img src="img/shop/icons/Star.png" alt="" class="rating-star">
+									</div>
+								</li>
+							</ul>
+						</div>
 					</section>
 				</div>
 			</div>
 
 			<footer class="footer">
-	<div class="container">
-		<div class="footer__row">
-			<div class="footer__logo"><a href="#">Soudemy</a></div>
-			<div class="footer__content">
-				<div class="footer__column">
-					<div class="footer__title">
-						<h2>About us</h2>
-					</div>
-					<div class="footer__subtitle">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus vitae congue id ipsum sed
-							neque et dui accumsan. Nibh
-							semper magna facilisi ridiculus luctus amet. Aliquam</p>
-					</div>
-				</div>
+				<div class="container">
+					<div class="footer__row">
+						<div class="footer__logo"><a>Soudemy</a></div>
+						<div class="footer__content">
+							<div class="footer__column">
+								<div class="footer__title">
+									<h2>About us</h2>
+								</div>
+								<div class="footer__subtitle">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus vitae congue id
+										ipsum sed
+										neque et dui accumsan. Nibh
+										semper magna facilisi ridiculus luctus amet. Aliquam</p>
+								</div>
+							</div>
 
-				<div class="footer__column">
-					<div class="footer__title">
-						<h2>Useful</h2>
-					</div>
-					<ul class="footer__links">
-						<li><a href="#">Download product</a></li>
-						<li><a href="#">Download product</a></li>
-						<li><a href="#">Download product</a></li>
-						<li><a href="#">Download product</a></li>
-						<li><a href="#">Download product</a></li>
-						<li><a href="#">Download product</a></li>
-					</ul>
-				</div>
+							<div class="footer__column">
+								<div class="footer__title">
+									<h2>Useful</h2>
+								</div>
+								<ul class="footer__links">
+									<li><a>Download product</a></li>
+									<li><a>Download product</a></li>
+									<li><a>Download product</a></li>
+									<li><a>Download product</a></li>
+									<li><a>Download product</a></li>
+									<li><a>Download product</a></li>
+								</ul>
+							</div>
 
-				<div class="footer__column">
-					<div class="footer__title">
-						<h2>Download</h2>
-					</div>
-					<ul class="footer__links">
-						<li><a href="#"> instgram </a></li>
-						<li><a href="#"> facebook </a></li>
-						<li><a href="#"> Twitter </a></li>
-						<li><a href="#"> printeress </a></li>
-						<li><a href="#"> youtube </a></li>
-					</ul>
-				</div>
+							<div class="footer__column">
+								<div class="footer__title">
+									<h2>Download</h2>
+								</div>
+								<ul class="footer__links">
+									<li><a> instgram </a></li>
+									<li><a> facebook </a></li>
+									<li><a> Twitter </a></li>
+									<li><a> printeress </a></li>
+									<li><a> youtube </a></li>
+								</ul>
+							</div>
 
-				<div class="footer__column">
-					<div class="footer__title">
-						<h2>Call center</h2>
-					</div>
-					<div class="footer__subtitle">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus vitae</p>
-						<p>soroushnorozyui @gmail.com</p>
-						<p>+1 333 555</p>
+							<div class="footer__column">
+								<div class="footer__title">
+									<h2>Call center</h2>
+								</div>
+								<div class="footer__subtitle">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus vitae</p>
+									<p>soroushnorozyui @gmail.com</p>
+									<p>+1 333 555</p>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
-		</div>
+			</footer>
+		</main>
 	</div>
-</footer>
-</main>
-</div>
-<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
-	crossorigin="anonymous"></script>
-<!-- <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script> -->
-<script src="js/app.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.1.js"
+		integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+	<script src="js/app.min.js"></script>
 </body>
+
 </html>

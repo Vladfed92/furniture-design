@@ -1,42 +1,19 @@
-
 <!DOCTYPE html>
 <html lang="en">
- <head>
+
+<head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
 	<title>Title</title>
-</head>	
+</head>
 
 <body>
 	<div class="wrapper">
 		<main class="page">
-			<header class="header header-black">
-	<div class="container">
-
-		<nav class="black navigation">
-			<a href="/index.html" class="logo">
-				soudemy
-			</a>
-			<div class="menu">
-				<ul class="menu__navigation">
-					<li class="menu__item"><a href="/index.html">Home</a></li>
-					<li class="menu__item"><a href="/shop.html">Shop</a></li>
-					<li class="menu__item"><a href="/about_us.html">About us</a></li>
-					<li class="menu__item"><a href="/blog.html">Blog</a></li>
-				</ul>
-				<ul class="menu__navigation">
-					<li class="menu__item"><a href="#"><img src="img/main/icons/search-normal.svg" alt=""></a></li>
-					<li class="menu__item"><a href="#"><img src="img/main/icons/bag-2.svg" alt=""></a></li>
-					<li class="menu__item"><a class="burger" href="#"><span class="burger__item"></span></a></li>
-				</ul>
-
-			</div>
-		</nav>
-	</div>
-</header>
+			@@include('html/header-black.html',{})
 			<div class="container">
 				<div class="blog__body">
 					<div class="blog__vay">
@@ -45,7 +22,8 @@
 					<div class="blog__columns">
 						<div class="blog__articles">
 							<div class="article">
-								<a href="blog–article.html"><img src="img/blog/photos/1 .png" alt="" class="article-img"></a>
+								<a href="blog–article.html"><img src="img/blog/photos/1 .png" alt=""
+										class="article-img"></a>
 								<div class="article__short-info">
 									<span class="article__date">Sep 26, 2022</span>
 									<span class="article__made-of">Newest, sofa and chair , wooden</span>
@@ -53,7 +31,9 @@
 									<span class="article__likes">5</span>
 									<span class="article__comments">3</span>
 								</div>
-								<a href="blog–article.html"><h2 class="article__title">New modern sofa is here</h2></a>
+								<a href="blog–article.html">
+									<h2 class="article__title">New modern sofa is here</h2>
+								</a>
 								<p class="article__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 									Suspendisse massa libero, mattis volutpat id. Egestas
 									adipiscing placerat eleifend a nascetur. Mattis proin enim, nam porttitor vitae.
@@ -63,7 +43,8 @@
 							</div>
 
 							<div class="article">
-								<a href="blog–article.html"><img src="img/blog/photos/2 .png" alt="" class="article-img"></a>
+								<a href="blog–article.html"><img src="img/blog/photos/2 .png" alt=""
+										class="article-img"></a>
 								<div class="article__short-info">
 									<span class="article__date">Sep 26, 2022</span>
 									<span class="article__made-of">Newest, sofa and chair , wooden</span>
@@ -71,7 +52,9 @@
 									<span class="article__likes">5</span>
 									<span class="article__comments">3</span>
 								</div>
-								<a href="blog–article.html"><h2 class="article__title">New modern sofa is here</h2></a>
+								<a href="blog–article.html">
+									<h2 class="article__title">New modern sofa is here</h2>
+								</a>
 								<p class="article__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 									Suspendisse massa libero, mattis volutpat id. Egestas
 									adipiscing placerat eleifend a nascetur. Mattis proin enim, nam porttitor vitae.
@@ -81,7 +64,8 @@
 							</div>
 
 							<div class="article">
-								<a href="blog–article.html"><img src="img/blog/photos/3 .png" alt="" class="article-img"></a>
+								<a href="blog–article.html"><img src="img/blog/photos/3 .png" alt=""
+										class="article-img"></a>
 								<div class="article__short-info">
 									<span class="article__date">Sep 26, 2022</span>
 									<span class="article__made-of">Newest, sofa and chair , wooden</span>
@@ -89,7 +73,9 @@
 									<span class="article__likes">5</span>
 									<span class="article__comments">3</span>
 								</div>
-								<a href="blog–article.html"><h2 class="article__title">New modern sofa is here</h2></a>
+								<a href="blog–article.html">
+									<h2 class="article__title">New modern sofa is here</h2>
+								</a>
 								<p class="article__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 									Suspendisse massa libero, mattis volutpat id. Egestas
 									adipiscing placerat eleifend a nascetur. Mattis proin enim, nam porttitor vitae.
@@ -157,67 +143,69 @@
 
 			</div>
 			<footer class="footer">
-	<div class="container">
-		<div class="footer__row">
-			<div class="footer__logo"><a href="#">Soudemy</a></div>
-			<div class="footer__content">
-				<div class="footer__column">
-					<div class="footer__title">
-						<h2>About us</h2>
-					</div>
-					<div class="footer__subtitle">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus vitae congue id ipsum sed
-							neque et dui accumsan. Nibh
-							semper magna facilisi ridiculus luctus amet. Aliquam</p>
-					</div>
-				</div>
+				<div class="container">
+					<div class="footer__row">
+						<div class="footer__logo"><a href="#">Soudemy</a></div>
+						<div class="footer__content">
+							<div class="footer__column">
+								<div class="footer__title">
+									<h2>About us</h2>
+								</div>
+								<div class="footer__subtitle">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus vitae congue id
+										ipsum sed
+										neque et dui accumsan. Nibh
+										semper magna facilisi ridiculus luctus amet. Aliquam</p>
+								</div>
+							</div>
 
-				<div class="footer__column">
-					<div class="footer__title">
-						<h2>Useful</h2>
-					</div>
-					<ul class="footer__links">
-						<li><a href="#">Download product</a></li>
-						<li><a href="#">Download product</a></li>
-						<li><a href="#">Download product</a></li>
-						<li><a href="#">Download product</a></li>
-						<li><a href="#">Download product</a></li>
-						<li><a href="#">Download product</a></li>
-					</ul>
-				</div>
+							<div class="footer__column">
+								<div class="footer__title">
+									<h2>Useful</h2>
+								</div>
+								<ul class="footer__links">
+									<li><a href="#">Download product</a></li>
+									<li><a href="#">Download product</a></li>
+									<li><a href="#">Download product</a></li>
+									<li><a href="#">Download product</a></li>
+									<li><a href="#">Download product</a></li>
+									<li><a href="#">Download product</a></li>
+								</ul>
+							</div>
 
-				<div class="footer__column">
-					<div class="footer__title">
-						<h2>Download</h2>
-					</div>
-					<ul class="footer__links">
-						<li><a href="#"> instgram </a></li>
-						<li><a href="#"> facebook </a></li>
-						<li><a href="#"> Twitter </a></li>
-						<li><a href="#"> printeress </a></li>
-						<li><a href="#"> youtube </a></li>
-					</ul>
-				</div>
+							<div class="footer__column">
+								<div class="footer__title">
+									<h2>Download</h2>
+								</div>
+								<ul class="footer__links">
+									<li><a href="#"> instgram </a></li>
+									<li><a href="#"> facebook </a></li>
+									<li><a href="#"> Twitter </a></li>
+									<li><a href="#"> printeress </a></li>
+									<li><a href="#"> youtube </a></li>
+								</ul>
+							</div>
 
-				<div class="footer__column">
-					<div class="footer__title">
-						<h2>Call center</h2>
-					</div>
-					<div class="footer__subtitle">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus vitae</p>
-						<p>soroushnorozyui @gmail.com</p>
-						<p>+1 333 555</p>
+							<div class="footer__column">
+								<div class="footer__title">
+									<h2>Call center</h2>
+								</div>
+								<div class="footer__subtitle">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus vitae</p>
+									<p>soroushnorozyui @gmail.com</p>
+									<p>+1 333 555</p>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
-		</div>
+			</footer>
+		</main>
 	</div>
-</footer>
-</main>
-</div>
-<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
-	crossorigin="anonymous"></script>
-<!-- <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script> -->
-<script src="js/app.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.1.js"
+		integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script> -->
+	<script src="js/app.min.js"></script>
 </body>
+
 </html>

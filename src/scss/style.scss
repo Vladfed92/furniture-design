@@ -18,7 +18,7 @@
 @import "shop-goods";
 @import "about_us";
 @import "blog";
-@import modal-window "blog-article";
+@import "blog-article";
 
 /* MAIN rules */
 body {
@@ -44,7 +44,7 @@ a {
 }
 
 .modal-window {
-	display: none;
+	display:none;
 	position: fixed;
 	top: -200px;
 	width: 100%;
@@ -52,6 +52,10 @@ a {
 	z-index: 10;
 	justify-content: center;
 	align-items: center;
+
+	&.active {
+		display: flex;
+	}
 
 	.modal-window-attention {
 		width: 60%;
@@ -153,9 +157,6 @@ a {
 		}
 	}
 
-	&.active {
-		display: flex;
-	}
 }
 
 .subtitle {

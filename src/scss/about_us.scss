@@ -1,17 +1,4 @@
 // about us introduction
-@mixin for-phones {
-	@media (max-width: 480px) {
-		@content;
-	}
-}
-
-@mixin for-tablets {
-	@media (max-width: 820px) {
-		@content;
-	}
-}
-
-
 .about__introduce {
 	height: 100%;
 	width: 100%;
@@ -39,9 +26,7 @@
 }
 
 // about us priorities
-
 .about-us__priorities {
-
 	.priorities__body {
 		margin-top: 90px;
 		margin-bottom: 50px;
@@ -53,16 +38,14 @@
 }
 
 // about us video 
-
 .about__video {
 	margin-bottom: 90px;
-display: flex;
-justify-content: center;
+	display: flex;
+	justify-content: center;
 
 }
 
 // functionality 
-
 .functionality__body {
 	display: flex;
 	margin-bottom: 120px;
@@ -73,7 +56,6 @@ justify-content: center;
 		text-align: center;
 		margin-bottom: 60px;
 	}
-
 }
 
 .functionality__info {
@@ -91,7 +73,6 @@ justify-content: center;
 	margin-bottom: 24px;
 	width: 100%;
 	max-width: 381px;
-
 }
 
 .functionality__subtitle {
@@ -123,10 +104,6 @@ justify-content: center;
 	margin-bottom: 30px;
 }
 
-.points__name {}
-
-.points__percent {}
-
 .properties__range-creativity {
 	content: " ";
 	width: 100%;
@@ -153,7 +130,6 @@ justify-content: center;
 }
 
 // blog posts
-
 .blog-posts__body {
 	margin-bottom: 170px;
 
@@ -206,7 +182,7 @@ justify-content: center;
 		height: 100%;
 		transition: all 0.2s ease 0s;
 
-		&:hover{
+		&:hover {
 			scale: 1.1;
 		}
 	}
@@ -232,7 +208,8 @@ justify-content: center;
 		font-size: 19px;
 		color: #303030;
 		text-decoration: underline;
-		&:hover{
+
+		&:hover {
 			text-decoration: none;
 		}
 	}

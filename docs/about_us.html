@@ -1,41 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
+
+<head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
 	<title>Title</title>
-</head>	
+</head>
 
 <body>
 	<div class="wrapper">
 		<main class="page">
-			<header class="header header-black">
-	<div class="container">
-
-		<nav class="black navigation">
-			<a href="/index.html" class="logo">
-				soudemy
-			</a>
-			<div class="menu">
-				<ul class="menu__navigation">
-					<li class="menu__item"><a href="/index.html">Home</a></li>
-					<li class="menu__item"><a href="/shop.html">Shop</a></li>
-					<li class="menu__item"><a href="/about_us.html">About us</a></li>
-					<li class="menu__item"><a href="/blog.html">Blog</a></li>
-				</ul>
-				<ul class="menu__navigation">
-					<li class="menu__item"><a href="#"><img src="img/main/icons/search-normal.svg" alt=""></a></li>
-					<li class="menu__item"><a href="#"><img src="img/main/icons/bag-2.svg" alt=""></a></li>
-					<li class="menu__item"><a class="burger" href="#"><span class="burger__item"></span></a></li>
-				</ul>
-
-			</div>
-		</nav>
-	</div>
-</header>
+			@@include('html/header-black.html',{})
 
 			<!-- About us introduction -->
 
@@ -195,74 +173,74 @@
 								</div>
 								<div class="blog-posts__link"><a href="#">Read more</a></div>
 							</div>
-
-
 						</div>
 					</div>
 				</div>
 			</div>
 			<footer class="footer">
-	<div class="container">
-		<div class="footer__row">
-			<div class="footer__logo"><a href="#">Soudemy</a></div>
-			<div class="footer__content">
-				<div class="footer__column">
-					<div class="footer__title">
-						<h2>About us</h2>
-					</div>
-					<div class="footer__subtitle">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus vitae congue id ipsum sed
-							neque et dui accumsan. Nibh
-							semper magna facilisi ridiculus luctus amet. Aliquam</p>
-					</div>
-				</div>
+				<div class="container">
+					<div class="footer__row">
+						<div class="footer__logo"><a href="#">Soudemy</a></div>
+						<div class="footer__content">
+							<div class="footer__column">
+								<div class="footer__title">
+									<h2>About us</h2>
+								</div>
+								<div class="footer__subtitle">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus vitae congue id
+										ipsum sed
+										neque et dui accumsan. Nibh
+										semper magna facilisi ridiculus luctus amet. Aliquam</p>
+								</div>
+							</div>
 
-				<div class="footer__column">
-					<div class="footer__title">
-						<h2>Useful</h2>
-					</div>
-					<ul class="footer__links">
-						<li><a href="#">Download product</a></li>
-						<li><a href="#">Download product</a></li>
-						<li><a href="#">Download product</a></li>
-						<li><a href="#">Download product</a></li>
-						<li><a href="#">Download product</a></li>
-						<li><a href="#">Download product</a></li>
-					</ul>
-				</div>
+							<div class="footer__column">
+								<div class="footer__title">
+									<h2>Useful</h2>
+								</div>
+								<ul class="footer__links">
+									<li><a href="#">Download product</a></li>
+									<li><a href="#">Download product</a></li>
+									<li><a href="#">Download product</a></li>
+									<li><a href="#">Download product</a></li>
+									<li><a href="#">Download product</a></li>
+									<li><a href="#">Download product</a></li>
+								</ul>
+							</div>
 
-				<div class="footer__column">
-					<div class="footer__title">
-						<h2>Download</h2>
-					</div>
-					<ul class="footer__links">
-						<li><a href="#"> instgram </a></li>
-						<li><a href="#"> facebook </a></li>
-						<li><a href="#"> Twitter </a></li>
-						<li><a href="#"> printeress </a></li>
-						<li><a href="#"> youtube </a></li>
-					</ul>
-				</div>
+							<div class="footer__column">
+								<div class="footer__title">
+									<h2>Download</h2>
+								</div>
+								<ul class="footer__links">
+									<li><a href="#"> instgram </a></li>
+									<li><a href="#"> facebook </a></li>
+									<li><a href="#"> Twitter </a></li>
+									<li><a href="#"> printeress </a></li>
+									<li><a href="#"> youtube </a></li>
+								</ul>
+							</div>
 
-				<div class="footer__column">
-					<div class="footer__title">
-						<h2>Call center</h2>
-					</div>
-					<div class="footer__subtitle">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus vitae</p>
-						<p>soroushnorozyui @gmail.com</p>
-						<p>+1 333 555</p>
+							<div class="footer__column">
+								<div class="footer__title">
+									<h2>Call center</h2>
+								</div>
+								<div class="footer__subtitle">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus vitae</p>
+									<p>soroushnorozyui @gmail.com</p>
+									<p>+1 333 555</p>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
-		</div>
+			</footer>
+		</main>
 	</div>
-</footer>
-</main>
-</div>
-<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
-	crossorigin="anonymous"></script>
-<!-- <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script> -->
-<script src="js/app.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.1.js"
+		integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script> -->
+	<script src="js/app.min.js"></script>
 </body>
+
 </html>

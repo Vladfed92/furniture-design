@@ -83,10 +83,8 @@ const cart = document.querySelector('.cart-img')
 const cartActive = document.querySelectorAll('.cart, .cart-disabled')
 const cartDisabled = document.querySelector('.cart-disabled');
 // variables for add like click
-const heart = document.querySelector('.heart')
-const likeHolder = document.querySelector('.article__likes')
+const heart = document.querySelectorAll('.heart')
 let likeCount = 5;
-
 
 // add new class 'active' function
 const toggleClass = (element) => {
@@ -145,30 +143,34 @@ cartDisabled.addEventListener('click', function () {
 	cartActive.forEach(removeClass)
 })
 
-
-const addLikeCount = () => {
-	likeHolder.textContent = likeCount
-}
-
 if (heart) {
-	heart.addEventListener('click', function () {
-		if (heart.classList.contains('noLiked')) {
-			likeCount++;
-			addLikeCount();
-			heart.style.fill = 'red';
-			heart.classList.remove('noLiked')
-			heart.classList.add('isLiked')
+	heart.forEach(element => {
+		element.addEventListener('click', function () {
 
-		}
-		else if (heart.classList.contains('isLiked')) {
-			likeCount--;
-			addLikeCount();
-			heart.style.fill = 'none';
-			heart.classList.remove('isLiked')
-			heart.classList.add('noLiked')
-		}
+			const addLikeCount = () => {
+				const likeHolder = element.nextElementSibling
+				likeHolder.textContent = likeCount
+			}
 
+			if (element.classList.contains('noLiked')) {
+				likeCount++;
+				addLikeCount();
+				element.style.fill = 'red';
+				element.classList.remove('noLiked')
+				element.classList.add('isLiked')
+
+			}
+			else if (element.classList.contains('isLiked')) {
+				likeCount--;
+				addLikeCount();
+				element.style.fill = 'none';
+				element.classList.remove('isLiked')
+				element.classList.add('noLiked')
+			}
+
+		})
 	})
+
 }
 
 // range for filter in shop-goods
