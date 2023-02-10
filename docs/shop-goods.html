@@ -1,36 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+ <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
 	<title>Title</title>
-</head>
+</head>	
 
 <body>
 	<div class="wrapper">
 		<main class="page">
-			@@include('html/header-black.html',{})
+			<header class="header header-black">
+	<div class="container">
+		<nav class="black navigation">
+			<a href="/index.html" class="logo">
+				soudemy
+			</a>
+			<div class="menu">
+				<ul class="menu__navigation">
+					<li class="menu__item"><a href="/index.html">Home</a></li>
+					<li class="menu__item"><a href="/shop.html">Shop</a></li>
+					<li class="menu__item"><a href="/about_us.html">About us</a></li>
+					<li class="menu__item"><a href="/blog.html">Blog</a></li>
+				</ul>
+				<ul class="menu__navigation">
+					<li class="cart-disabled"></li>
+					<li class="menu__item">
+						<form action="" class="header-form">
+							<input type="search" class="header-search">
+						</form> <a href="#"><img src="img/main/icons/search-normal.svg" alt="dandruff"
+								class="dandruff"></a>
+					</li>
+					<li class="menu__item"><a href="#"><img src="img/main/icons/bag-2.svg" alt="" class="cart-img"></a>
+						<div class="cart">
+							<div class="cart-info">
+								<img src="img/shop/goods/8.png" alt="cart-goods-img" class="cart-goods-img">
+								<div class="cart-main-info">
+									<h3>New furniture</h3>
+									<div class="cart-quontity-cost">
+										<div class="quontity">1pc</div>
+										<div class="price">
+											<div class="old-price"><strike>799$</strike></div>
+											<div class="actual-price">499$</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="cart-final-info">
+								<div class="final-cart-price">
+									<p>Final cost</p>
+									<p>499$</p>
+								</div>
+								<button class="cort-button">Buy now</button>
+							</div>
+						</div>
+					</li>
+					<li class="menu__item"><a class="burger" href="#"><span class="burger__item"></span></a></li>
+				</ul>
+
+			</div>
+		</nav>
+	</div>
+</header>
+
+			<div class="modal-window">
+				<div class="modal-window-attention">
+					<div class="head-attention">
+						<h3 class="head-message">Uuuuups, something go wrong!!! </h3>
+						<div class="modal-window-buttom">
+							<div class="criss-cross"></div>
+						</div>
+					</div>
+					<div class="message-atantion">
+						<p class='message-text'>Sorry, it's item not ready yet. It`s need backend work or this page is not ready yet</p>
+			
+						<div class="close-message-button">Close</div>
+					</div>
+				</div>
+			</div>
+
 			<div class="shop-goods">
 				<div class="container">
 					<div class="shop-goods__vay">
-						<p>shope/ sofa code 234</p>
+						<a href="http://localhost:3000/shop.html">shop</a>
+						<p>/</p>
+						<a href="#">sofa code 234</a>
 					</div>
+
 					<div class="shop-goods__columns">
-						<div class="shop-goods__photos">
-							<div class="shop-goods_photos-small">
-								<img src="img/shop/goods/1.png" alt="" class="small-photo">
-								<img src="img/shop/goods/1.png" alt="" class="small-photo">
-								<img src="img/shop/goods/1.png" alt="" class="small-photo">
-								<img src="img/shop/goods/1.png" alt="" class="small-photo">
-							</div>
-							<div class="shop-goods_photos-large">
-								<img src="img/shop/goods/1.png" alt="" class="large-photo">
-							</div>
+						<div class="carousel">
+							<section id="thumbnail-carousel" class="splide-goods-item splide thumbnail-carousel"
+								aria-label="The carousel with thumbnails. Selecting a thumbnail will change the Beautiful Gallery carousel.">
+								<div class="splide__track">
+									<ul class="splide__list">
+										<li class="splide__slide">
+											<img src="img/shop/goods/1.png" alt="">
+										</li>
+										<li class="splide__slide">
+											<img src="img/shop/goods/2.png" alt="">
+										</li>
+										<li class="splide__slide">
+											<img src="img/shop/goods/3.png" alt="">
+										</li>
+										<li class="splide__slide">
+											<img src="img/shop/goods/4.png" alt="">
+										</li>
+									</ul>
+								</div>
+							</section>
+							<section id="main-carousel" class="splide-goods-item splide main-carousel"
+								aria-label="The carousel with thumbnails. Selecting a thumbnail will change the Beautiful Gallery carousel.">
+								<div class="splide__track">
+									<ul class="splide__list">
+										<li class="splide__slide">
+											<img src="img/shop/goods/1.png" alt="">
+										</li>
+										<li class="splide__slide">
+											<img src="img/shop/goods/2.png" alt="">
+										</li>
+										<li class="splide__slide">
+											<img src="img/shop/goods/3.png" alt="">
+										</li>
+										<li class="splide__slide">
+											<img src="img/shop/goods/4.png" alt="">
+										</li>
+									</ul>
+								</div>
+							</section>
 						</div>
+
 						<div class="shop-goods__info">
 							<div class="shop-goods__info-title">
 								<h3>Sofa code 234</h3>
@@ -52,10 +152,15 @@
 									enim donec adipiscing nibh.
 									Consectetur in ac elementum aliquam imperdiet tellus.</p>
 							</div>
-							<form action="" class="shop-goods__quontity">
-								<input type="number" id="cart-quontity" class="cart-quontity">
+							<div class="shop-goods__quontity">
+								<div class="quontity-counter">
+									<span class="left-arrow"></span>
+									<div class="counter" id="counter">1</div>
+									<span class="right-arrow"></span>
+								</div>
 								<button class="cart-button button">Add to cart</button>
-							</form>
+							</div>
+
 							<div class="wish-list">
 								<span class="like"></span>
 								<span class="add-to-wish">Add to wish</span>
@@ -65,8 +170,8 @@
 								<div class="sort-info-item">Category: sofa</div>
 								<div class="sort-info-item">
 									<span>tags:</span>
-									<a class="tag-item have-no-page">sofa</a>
-									<a class="tag-item have-no-page">clean</a>
+									<a href="#" class="tag-item have-no-page">sofa</a>
+									<a href="#" class="tag-item have-no-page">clean</a>
 								</div>
 							</div>
 							<div class="shop-goods__manual">
@@ -111,9 +216,9 @@
 
 							<ul class="shop-goods__row-item-area splide__list">
 								<li class="shop-goods__row-item item splide__slide">
-									<a class="item__link have-no-page" href="./shop–goods.html"><img class="item__photo"
+									<a class="item__link have-no-page" href="#"><img class="item__photo"
 											src="img/shop/goods/2.png" alt=""></a>
-									<a class="item__name have-no-page" href="./shop–goods.html">
+									<a class="item__name have-no-page" href="#">
 										<p>Modern sofa</p>
 									</a>
 									<div class="item-rating">
@@ -126,9 +231,9 @@
 								</li>
 
 								<li class="shop-goods__row-item item splide__slide">
-									<a class="item__link have-no-page" href="./shop–goods.html"><img class="item__photo"
+									<a class="item__link have-no-page" href="#"><img class="item__photo"
 											src="img/shop/goods/3.png" alt=""></a>
-									<a class="item__name have-no-page" href="./shop–goods.html">
+									<a class="item__name have-no-page" href="#">
 										<p>Modern sofa</p>
 									</a>
 									<div class="item-rating">
@@ -141,9 +246,9 @@
 								</li>
 
 								<li class="shop-goods__row-item item splide__slide">
-									<a class="item__link have-no-page" href="./shop–goods.html"><img class="item__photo"
+									<a class="item__link have-no-page" href="#"><img class="item__photo"
 											src="img/shop/goods/4.png" alt=""></a>
-									<a class="item__name have-no-page" href="./shop–goods.html">
+									<a class="item__name have-no-page" href="#">
 										<p>Modern sofa</p>
 									</a>
 									<div class="item-rating">
@@ -156,9 +261,9 @@
 								</li>
 
 								<li class="shop-goods__row-item item splide__slide">
-									<a class="item__link have-no-page" href="./shop–goods.html"><img class="item__photo"
+									<a class="item__link have-no-page" href="#"><img class="item__photo"
 											src="img/shop/goods/5.png" alt=""></a>
-									<a class="item__name have-no-page" href="./shop–goods.html">
+									<a class="item__name have-no-page" href="#">
 										<p>Modern sofa</p>
 									</a>
 									<div class="item-rating">
@@ -176,68 +281,67 @@
 			</div>
 
 			<footer class="footer">
-				<div class="container">
-					<div class="footer__row">
-						<div class="footer__logo"><a>Soudemy</a></div>
-						<div class="footer__content">
-							<div class="footer__column">
-								<div class="footer__title">
-									<h2>About us</h2>
-								</div>
-								<div class="footer__subtitle">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus vitae congue id
-										ipsum sed
-										neque et dui accumsan. Nibh
-										semper magna facilisi ridiculus luctus amet. Aliquam</p>
-								</div>
-							</div>
-
-							<div class="footer__column">
-								<div class="footer__title">
-									<h2>Useful</h2>
-								</div>
-								<ul class="footer__links">
-									<li><a>Download product</a></li>
-									<li><a>Download product</a></li>
-									<li><a>Download product</a></li>
-									<li><a>Download product</a></li>
-									<li><a>Download product</a></li>
-									<li><a>Download product</a></li>
-								</ul>
-							</div>
-
-							<div class="footer__column">
-								<div class="footer__title">
-									<h2>Download</h2>
-								</div>
-								<ul class="footer__links">
-									<li><a> instgram </a></li>
-									<li><a> facebook </a></li>
-									<li><a> Twitter </a></li>
-									<li><a> printeress </a></li>
-									<li><a> youtube </a></li>
-								</ul>
-							</div>
-
-							<div class="footer__column">
-								<div class="footer__title">
-									<h2>Call center</h2>
-								</div>
-								<div class="footer__subtitle">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus vitae</p>
-									<p>soroushnorozyui @gmail.com</p>
-									<p>+1 333 555</p>
-								</div>
-							</div>
-						</div>
+	<div class="container">
+		<div class="footer__row">
+			<div class="footer__logo"><a href="#">Soudemy</a></div>
+			<div class="footer__content">
+				<div class="footer__column">
+					<div class="footer__title">
+						<h2>About us</h2>
+					</div>
+					<div class="footer__subtitle">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus vitae congue id ipsum sed
+							neque et dui accumsan. Nibh
+							semper magna facilisi ridiculus luctus amet. Aliquam</p>
 					</div>
 				</div>
-			</footer>
-		</main>
-	</div>
-	<script src="https://code.jquery.com/jquery-3.6.1.js"
-		integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-	<script src="js/app.min.js"></script>
-</body>
 
+				<div class="footer__column">
+					<div class="footer__title">
+						<h2>Useful</h2>
+					</div>
+					<ul class="footer__links">
+						<li><a href="#">Download product</a></li>
+						<li><a href="#">Download product</a></li>
+						<li><a href="#">Download product</a></li>
+						<li><a href="#">Download product</a></li>
+						<li><a href="#">Download product</a></li>
+						<li><a href="#">Download product</a></li>
+					</ul>
+				</div>
+
+				<div class="footer__column">
+					<div class="footer__title">
+						<h2>Download</h2>
+					</div>
+					<ul class="footer__links">
+						<li><a href="#"> instgram </a></li>
+						<li><a href="#"> facebook </a></li>
+						<li><a href="#"> Twitter </a></li>
+						<li><a href="#"> printeress </a></li>
+						<li><a href="#"> youtube </a></li>
+					</ul>
+				</div>
+
+				<div class="footer__column">
+					<div class="footer__title">
+						<h2>Call center</h2>
+					</div>
+					<div class="footer__subtitle">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus vitae</p>
+						<p>soroushnorozyui @gmail.com</p>
+						<p>+1 333 555</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+</main>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+	crossorigin="anonymous"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script> -->
+<script src="js/app.min.js"></script>
+</body>
 </html>

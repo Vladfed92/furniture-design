@@ -14,7 +14,6 @@
 		<main class="page">
 			<header class="header header-black">
 	<div class="container">
-
 		<nav class="black navigation">
 			<a href="/index.html" class="logo">
 				soudemy
@@ -27,8 +26,37 @@
 					<li class="menu__item"><a href="/blog.html">Blog</a></li>
 				</ul>
 				<ul class="menu__navigation">
-					<li class="menu__item"><a href="#"><img src="img/main/icons/search-normal.svg" alt=""></a></li>
-					<li class="menu__item"><a href="#"><img src="img/main/icons/bag-2.svg" alt=""></a></li>
+					<li class="cart-disabled"></li>
+					<li class="menu__item">
+						<form action="" class="header-form">
+							<input type="search" class="header-search">
+						</form> <a href="#"><img src="img/main/icons/search-normal.svg" alt="dandruff"
+								class="dandruff"></a>
+					</li>
+					<li class="menu__item"><a href="#"><img src="img/main/icons/bag-2.svg" alt="" class="cart-img"></a>
+						<div class="cart">
+							<div class="cart-info">
+								<img src="img/shop/goods/8.png" alt="cart-goods-img" class="cart-goods-img">
+								<div class="cart-main-info">
+									<h3>New furniture</h3>
+									<div class="cart-quontity-cost">
+										<div class="quontity">1pc</div>
+										<div class="price">
+											<div class="old-price"><strike>799$</strike></div>
+											<div class="actual-price">499$</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="cart-final-info">
+								<div class="final-cart-price">
+									<p>Final cost</p>
+									<p>499$</p>
+								</div>
+								<button class="cort-button">Buy now</button>
+							</div>
+						</div>
+					</li>
 					<li class="menu__item"><a class="burger" href="#"><span class="burger__item"></span></a></li>
 				</ul>
 
@@ -36,10 +64,32 @@
 		</nav>
 	</div>
 </header>
+
+			<div class="modal-window">
+				<div class="modal-window-attention">
+					<div class="head-attention">
+						<h3 class="head-message">Uuuuups, something go wrong!!! </h3>
+						<div class="modal-window-buttom">
+							<div class="criss-cross"></div>
+						</div>
+					</div>
+					<div class="message-atantion">
+						<p class='message-text'>Sorry, it's item not ready yet. It`s need backend work or this page is not ready yet
+						</p>
+			
+						<div class="close-message-button">Close</div>
+					</div>
+				</div>
+			</div>
+
 			<div class="container">
 				<div class="blog__body">
-					<div class="blog__vay">
-						<p>shope/ blog</p>
+					<div class="shop-goods__vay">
+						<a href="http://localhost:3000/shop.html">shop</a>
+						<p>/</p>
+						<a href="http://localhost:3000/blog.html">blog</a>
+							<p>/</p>
+							<a href="http://localhost:3000/blog%E2%80%93article.html">New Modern Sofa</a>
 					</div>
 					<div class="blog__columns">
 						<div class="blog__articles">
@@ -49,8 +99,12 @@
 									<span class="article__date">Sep 26, 2022</span>
 									<span class="article__made-of">Newest, sofa and chair , wooden</span>
 									<span class="article__made-by">By soroush norozy</span>
-									<span class="article__likes">5</span>
-									<span class="article__comments">3</span>
+									<svg class="heart noLiked" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M11.0425 18.2087C10.745 18.3137 10.255 18.3137 9.9575 18.2087C7.42 17.3425 1.75 13.7287 1.75 7.60374C1.75 4.89999 3.92875 2.71249 6.615 2.71249C8.2075 2.71249 9.61625 3.48249 10.5 4.67249C11.3837 3.48249 12.8013 2.71249 14.385 2.71249C17.0713 2.71249 19.25 4.89999 19.25 7.60374C19.25 13.7287 13.58 17.3425 11.0425 18.2087Z"
+											stroke="#9B9B9B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+									<span class="article__comments">5</span>
 								</div>
 								<h2 class="article__title">New modern sofa is here</h2>
 								<p class="article__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -66,8 +120,8 @@
 									ultricies a eget sed. Vestibulum velit vulputate amet nunc amet. “
 								</div>
 								<div class="article__additional-photo">
-									<a href=""><img src="img/blog/photos/2 .png" alt=""></a>
-									<a href=""><img src="img/blog/photos/3 .png" alt=""></a>
+									<a href=""#><img src="img/blog/photos/2 .png" alt="" class="have-no-page"></a>
+									<a href="#"><img src="img/blog/photos/3 .png" alt="" class="have-no-page"></a>
 								</div>
 
 								<section class="article__navigation-menu splide splide-blog-item" role="group"
@@ -105,9 +159,9 @@
 										placeholder="Your email">
 									<input type="text" name="website" id="website" class="article__website input"
 										placeholder="Your website">
-									<input type="radio" name="radio" id="radio" class="article__radio">
-									<p>SAVE MY NAME , EMAIL, AND WEBSITE IN THIS browser for the next time comment</p>
-									<button class="article__btn">Submit</button>
+									<input type="checkbox" name="radio" id="radio" class="article__radio">
+									<label type="text" id="radio" class="label-radio"> Sace my name, email, amd website in this browser for the next time comment</label>
+									<div class="article__btn">Submit</div>
 								</form>
 							</div>
 
@@ -140,14 +194,12 @@
 
 							<div class="blog__filter-post">
 								<h3 class="blog__filter-post-title">Recent post</h3>
-								<p class="blog__filter-post-subtitle">Lorem ipsum dolor sit amet, consectetur</p>
-								<p class="blog__filter-post-subtitle">Lorem ipsum dolor sit amet, consectetur</p>
-								<p class="blog__filter-post-subtitle">Lorem ipsum dolor sit amet, consectetur</p>
-							</div>
-							<div class="blog__filter-tegs">
-								<h3 class="blog__filter-tegs-title">Tags</h3>
-								<a href="" class="blog__filter-teg-item">sofa</a>
-								<a href="" class="blog__filter-teg-item">clean</a>
+								<a href="#" class="blog__filter-post-subtitle have-no-page">Lorem ipsum dolor sit amet,
+									consectetur</a>
+								<a href="#" class="blog__filter-post-subtitle have-no-page">Lorem ipsum dolor sit amet,
+									consectetur</a>
+								<a href="#" class="blog__filter-post-subtitle have-no-page">Lorem ipsum dolor sit amet,
+									consectetur</a>
 							</div>
 						</div>
 					</div>

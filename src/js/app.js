@@ -1,7 +1,6 @@
 import * as flsFunctions from "./modules/functions.js";
 flsFunctions.isWebp();
 import Splide from '@splidejs/splide';
-//    BURGER JQERY    //
 
 $(document).ready(function () {
 
