@@ -105,6 +105,7 @@ burger.addEventListener('click', function () {
 	classesForActivationBurger.forEach(toggleClass)
 });
 //togle class 'active' to module window
+
 moduleHaveNoPage.forEach(element => {
 	element.addEventListener('click', function () {
 		toggleClass(moduleWindowhaveNoPage)
@@ -116,6 +117,12 @@ if (closingTriggers.length > 0) {
 		element.addEventListener('click', function () {
 			removeClass(moduleWindowhaveNoPage)
 		})
+	})
+}
+
+if (closingTriggers.length > 0) {
+	moduleWindowhaveNoPage.addEventListener('click', function(){
+		removeClass(moduleWindowhaveNoPage)
 	})
 }
 
