@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+	<title>Title</title>
+</head>	
+
+<body>
+	
+	<div class="container">
+
+		<header class="header header-black">
+	<div class="container">
+		<nav class="black navigation">
+			<a href="/index.html" class="logo">
+				soudemy
+			</a>
+			<div class="menu">
+				<ul class="menu__navigation">
+					<li class="menu__item"><a href="/index.html">Home</a></li>
+					<li class="menu__item"><a href="/shop.html">Shop</a></li>
+					<li class="menu__item"><a href="/about_us.html">About us</a></li>
+					<li class="menu__item"><a href="/blog.html">Blog</a></li>
+				</ul>
+				<ul class="menu__navigation">
+					<li class="cart-disabled"></li>
+					<li class="menu__item">
+						<form action="" class="header-form">
+							<input type="search" class="header-search">
+						</form> <a href="#"><img src="img/main/icons/search-normal.svg" alt="dandruff"
+								class="dandruff"></a>
+					</li>
+					<li class="menu__item"><a href="#"><img src="img/main/icons/bag-2.svg" alt="" class="cart-img"></a>
+						<div class="cart">
+							<div class="cart-info">
+								<img src="img/shop/goods/8.png" alt="cart-goods-img" class="cart-goods-img">
+								<div class="cart-main-info">
+									<h3>New furniture</h3>
+									<div class="cart-quontity-cost">
+										<div class="quontity">1pc</div>
+										<div class="price">
+											<div class="old-price"><strike>799$</strike></div>
+											<div class="actual-price">499$</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="cart-final-info">
+								<div class="final-cart-price">
+									<p>Final cost</p>
+									<p>499$</p>
+								</div>
+								<a href="/cart.html">
+								<button class="cart-button">Buy now</button>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li class="menu__item"><a class="burger" href="#"><span class="burger__item"></span></a></li>
+				</ul>
+
+			</div>
+		</nav>
+	</div>
+</header>
+
+		<h3 class="cart-title have-no-page">Contact information</h3>
+		<div class="cart-order">
+			<form class="custumer-info" action="">
+				<div  class="custumer-contact-information">
+					<label for="custumer-name">Name</label>
+					<input type="text" class="custumer-name" id="custumer-name"required>
+					<label for="custumer-second-name">Last name </label>
+					<input type="text" class="custumer-second-name" id="custumer-second-name"required>
+					<label for="custumer-email">Email</label>
+					<input type="email" class="custumer-email" id="custumer-email"required>
+					<label for="custumer-phone">Phone</label>
+					<input type="tel" class="custumer-phone" id="custumer-phone"required>
+
+				</div>
+				<div  class="shipment">
+					<section class="shipment-company">
+						<label for="shipment-company__list">Shipment company</label>
+						<select name="shipment-company__list" id="shipment-company__list"required>
+							<option value="nova_Poshta">Nova Poshta</option>
+							<option value="mist">Mist</option>
+							<option value="ukrposhta">Ukrposhta</option>
+						</select>
+					</section>
+
+					<section class="shipment-city">
+						<label for="shipment-city">City</label>
+						<input list="shipment-city__list" id="shipment-city" name="shipment-city"required>
+						<datalist id="shipment-city__list">
+							<option value="Kiyv">Kiyv</option>
+							<option value="Charkiv">Kharkiv</option>
+							<option value="Lviv">Lviv</option>
+							<option value="Mykolayv">Mykolayv</option>
+							<option value="Mariupol">Mariupol</option>
+							<option value="Chernovcy">Chernovcy</option>
+							<option value="Uzhgorod">Uzhgorod</option>
+							<option value="Odesa">Odesa</option>
+							<option value="Lugansk">Lugansk</option>
+							<option value="Dnipro">Dnipro</option>
+						</datalist>
+					</section>
+
+					<label for="shipment-street">Street</label>
+					<input type="text" class="shipment-street" id="shipment-street"required>
+					<label for="shipment-hause">Building</label>
+					<input type="text" class="shipment-hause" id="shipment-hause"required>
+					<section class="payment-method">
+						<label for="payment-method">Payment method</label>
+						<select name="payment-method" class="payment-method__list" id="payment-method__list"required>
+							<option value="online">Online</option>
+							<option value="imposed_payment">Imposed payment</option>
+							<option value="upon_receipt">Upon receipt</option>
+						</select>
+					</section>
+					<input type="submit" value="Submit" class="cart-accept-btn">
+				</div>
+			</form>
+			<div class="cart-body">
+				<div class="cart-info">
+					<img src="img/shop/goods/8.png" alt="cart-goods-img" class="cart-goods-img">
+					<div class="cart-main-info">
+						<h3>New furniture</h3>
+						<div class="cart-quontity-cost">
+							<div class="quontity">1pc</div>
+							<div class="price">
+								<div class="old-price"><strike>799$</strike></div>
+								<div class="actual-price">499$</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cart-final-info">
+					<div class="final-cart-price">
+						<p>Final cost</p>
+						<p>499$</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+
+
+<footer class="footer">
+	<div class="container">
+		<div class="footer__row">
+			<div class="footer__logo"><a href="#">Soudemy</a></div>
+			<div class="footer__content">
+				<div class="footer__column">
+					<div class="footer__title">
+						<h2>About us</h2>
+					</div>
+					<div class="footer__subtitle">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus vitae congue id ipsum sed
+							neque et dui accumsan. Nibh
+							semper magna facilisi ridiculus luctus amet. Aliquam</p>
+					</div>
+				</div>
+
+				<div class="footer__column">
+					<div class="footer__title">
+						<h2>Useful</h2>
+					</div>
+					<ul class="footer__links">
+						<li><a href="#">Download product</a></li>
+						<li><a href="#">Download product</a></li>
+						<li><a href="#">Download product</a></li>
+						<li><a href="#">Download product</a></li>
+						<li><a href="#">Download product</a></li>
+						<li><a href="#">Download product</a></li>
+					</ul>
+				</div>
+
+				<div class="footer__column">
+					<div class="footer__title">
+						<h2>Download</h2>
+					</div>
+					<ul class="footer__links">
+						<li><a href="#"> instgram </a></li>
+						<li><a href="#"> facebook </a></li>
+						<li><a href="#"> Twitter </a></li>
+						<li><a href="#"> printeress </a></li>
+						<li><a href="#"> youtube </a></li>
+					</ul>
+				</div>
+
+				<div class="footer__column">
+					<div class="footer__title">
+						<h2>Call center</h2>
+					</div>
+					<div class="footer__subtitle">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus vitae</p>
+						<a href="mail">soroushnorozyui@gmail.com</a>
+						<a>+1 333 555</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+</main>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+	crossorigin="anonymous"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script> -->
+<script src="js/app.min.js"></script>
+</body>
+</html>
